@@ -10,25 +10,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameInput = document.getElementById("ln");
   const emailInput = document.getElementById("le");
   const passwordInput = document.getElementById("lp");
+  const confirmPasswordInput = document.getElementById("confirmPassword");
 
   const passwordToggle = document.getElementById("eye");
-  const roleInputs = document.querySelectorAll('input[name="role"]');
+  const confirmPasswordToggle = document.getElementById("toggleConfirmPassword");
 
+  const roleInputs = document.querySelectorAll('input[name="role"]');
   const tabButtons = document.querySelectorAll(".tabs button");
+
   const nameField = document.querySelector(".nmf");
+  const confirmPasswordField = document.querySelector(".confirm-password-field");
+
+  const signinOptions = document.querySelector(".signin-options");
+  const termsField = document.querySelector(".signup-terms");
 
   const submitButton = document.getElementById("sub");
   const formMessage = document.getElementById("lm");
-
   const closeButton = document.getElementById("closeBtn");
 
   if (!loginForm || !emailInput || !passwordInput || !submitButton) {
-    console.error("Login form elements are missing. Check your HTML IDs.");
+    console.error("Login form elements are missing.");
     return;
   }
 
   // =========================================
-  // LOGIN STATE
+  // STATE
   // =========================================
 
   let selectedRole = "customer";
@@ -38,45 +44,65 @@ document.addEventListener("DOMContentLoaded", () => {
   // PASSWORD SHOW / HIDE
   // =========================================
 
-  function resetPasswordToggle() {
-    passwordInput.type = "password";
+  function togglePasswordVisibility(input, button) {
 
-    if (passwordToggle) {
-      passwordToggle.innerHTML = '<i class="fa-solid fa-eye"></i>';
-      passwordToggle.setAttribute("aria-label", "Show password");
+    if (!input || !button) return;
+
+    const icon = button.querySelector("i");
+    const isPassword = input.type === "password";
+
+    input.type = isPassword ? "text" : "password";
+
+    if (icon) {
+      icon.classList.toggle("fa-eye", !isPassword);
+      icon.classList.toggle("fa-eye-slash", isPassword);
     }
+
+    button.setAttribute(
+      "aria-label",
+      isPassword ? "Hide password" : "Show password"
+    );
   }
 
-  if (passwordToggle) {
-    passwordToggle.addEventListener("click", () => {
+  passwordToggle?.addEventListener("click", () => {
+    togglePasswordVisibility(passwordInput, passwordToggle);
+  });
 
-      const isPassword = passwordInput.type === "password";
+  confirmPasswordToggle?.addEventListener("click", () => {
+    togglePasswordVisibility(
+      confirmPasswordInput,
+      confirmPasswordToggle
+    );
+  });
 
-      passwordInput.type = isPassword ? "text" : "password";
+  function resetPasswordToggle(input, button) {
 
-      passwordToggle.innerHTML = isPassword
-        ? '<i class="fa-solid fa-eye-slash"></i>'
-        : '<i class="fa-solid fa-eye"></i>';
+    if (!input || !button) return;
 
-      passwordToggle.setAttribute(
-        "aria-label",
-        isPassword ? "Hide password" : "Show password"
-      );
+    input.type = "password";
 
-    });
+    const icon = button.querySelector("i");
+
+    if (icon) {
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+    }
+
+    button.setAttribute("aria-label", "Show password");
   }
 
   // =========================================
-  // VALIDATION
+  // VALIDATION REGEX
   // =========================================
 
-  function validateEmail(value) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  function validatePassword(value) {
-    return value.length >= 6;
-  }
+  const passwordRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&^#()_\-+=])[A-Za-z\d@$!%*?&^#()_\-+=]{8,}$/;
+
+  // =========================================
+  // MESSAGE
+  // =========================================
 
   function showError(message) {
 
@@ -111,11 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // CLEAR ERRORS WHILE TYPING
   // =========================================
 
-  [nameInput, emailInput, passwordInput].forEach((input) => {
+  [
+    nameInput,
+    emailInput,
+    passwordInput,
+    confirmPasswordInput
+  ].forEach((input) => {
 
-    if (!input) return;
-
-    input.addEventListener("input", () => {
+    input?.addEventListener("input", () => {
       input.style.borderColor = "";
       hideMessage();
     });
@@ -163,18 +192,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    if (nameField) {
-      nameField.hidden = tab !== "up";
+    const isSignup = tab === "up";
+
+    if (nameField) nameField.hidden = !isSignup;
+
+    if (confirmPasswordField) {
+      confirmPasswordField.hidden = !isSignup;
+    }
+
+    if (termsField) termsField.hidden = !isSignup;
+
+    if (signinOptions) {
+      signinOptions.hidden = isSignup;
     }
 
     if (nameInput) {
-      nameInput.required = tab === "up";
+      nameInput.required = isSignup;
     }
 
-    updateButtonText();
+    if (confirmPasswordInput) {
+      confirmPasswordInput.required = isSignup;
+    }
 
-    resetPasswordToggle();
+    const terms = loginForm.querySelector('input[name="terms"]');
+
+    if (terms) {
+      terms.required = isSignup;
+    }
+
+    resetPasswordToggle(passwordInput, passwordToggle);
+    resetPasswordToggle(confirmPasswordInput, confirmPasswordToggle);
+
     hideMessage();
+    updateButtonText();
   }
 
   tabButtons.forEach((button) => {
@@ -196,34 +246,38 @@ document.addEventListener("DOMContentLoaded", () => {
         ? "Beauty Partner"
         : "Customer";
 
-    submitButton.textContent = currentTab === "up"
-      ? `Create account as ${roleName}`
-      : `Sign in as ${roleName}`;
-
+    submitButton.innerHTML = currentTab === "up"
+      ? `Create account as ${roleName} <i class="fa-solid fa-arrow-right"></i>`
+      : `Sign in as ${roleName} <i class="fa-solid fa-arrow-right"></i>`;
   }
 
   // =========================================
-  // LOGIN / REGISTRATION
+  // SIGN IN / SIGNUP SUBMIT
   // =========================================
 
   loginForm.addEventListener("submit", (event) => {
 
     event.preventDefault();
-
     hideMessage();
 
     const nameValue = nameInput?.value.trim() || "";
-    const emailValue = emailInput.value.trim();
+    const emailValue = emailInput.value.trim().toLowerCase();
     const passwordValue = passwordInput.value;
+
+    const isSignup = currentTab === "up";
 
     const activeRole =
       document.querySelector('input[name="role"]:checked');
 
     const role = activeRole?.value || selectedRole;
 
-    // NAME VALIDATION
+    const terms = loginForm.querySelector('input[name="terms"]');
 
-    if (currentTab === "up" && nameValue.length < 2) {
+    // =========================================
+    // FULL NAME VALIDATION
+    // =========================================
+
+    if (isSignup && nameValue.length < 3) {
 
       showError("Please enter your full name.");
       nameInput?.focus();
@@ -231,9 +285,11 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    // =========================================
     // EMAIL VALIDATION
+    // =========================================
 
-    if (!validateEmail(emailValue)) {
+    if (!emailRegex.test(emailValue)) {
 
       emailInput.style.borderColor = "#b54747";
 
@@ -243,24 +299,48 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    // =========================================
     // PASSWORD VALIDATION
+    // =========================================
 
-    if (!passwordValue) {
+    if (isSignup && !passwordRegex.test(passwordValue)) {
 
-      passwordInput.style.borderColor = "#b54747";
+      showError(
+        "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character."
+      );
 
-      showError("Please enter your password.");
+      passwordInput.focus();
+      return;
+    }
+
+    if (!isSignup && passwordValue.length < 6) {
+
+      showError("Password must contain at least 6 characters.");
       passwordInput.focus();
 
       return;
     }
 
-    if (!validatePassword(passwordValue)) {
+    // =========================================
+    // CONFIRM PASSWORD
+    // =========================================
 
-      passwordInput.style.borderColor = "#b54747";
+    if (isSignup && passwordValue !== confirmPasswordInput.value) {
 
-      showError("Password must contain at least 6 characters.");
-      passwordInput.focus();
+      showError("Passwords do not match.");
+      confirmPasswordInput.focus();
+
+      return;
+    }
+
+    // =========================================
+    // TERMS AND PRIVACY
+    // =========================================
+
+    if (isSignup && (!terms || !terms.checked)) {
+
+      showError("Please accept the Terms and Privacy Policy.");
+      terms?.focus();
 
       return;
     }
@@ -274,8 +354,10 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.disabled = true;
     submitButton.classList.add("loading");
 
-    submitButton.innerHTML =
-      '<span>Please wait...</span><strong class="login-spinner"></strong>';
+    submitButton.innerHTML = `
+      <span>${isSignup ? "Creating Account..." : "Please wait..."}</span>
+      <strong class="login-spinner"></strong>
+    `;
 
     // =========================================
     // DEMO LOGIN / REGISTRATION
@@ -285,22 +367,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const currentUser = {
 
-        name: currentTab === "up"
+        name: isSignup
           ? nameValue
           : emailValue.split("@")[0],
 
         email: emailValue,
         role: role,
 
-        accountType: currentTab === "up"
-          ? "new"
-          : "existing"
+        accountType: isSignup ? "new" : "existing"
 
       };
-
-      // =========================================
-      // SAVE USER - SESSION STORAGE ONLY
-      // =========================================
 
       try {
 
@@ -311,15 +387,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       } catch (error) {
 
-        console.error("Could not save login information:", error);
+        console.error("Session storage error:", error);
 
         submitButton.disabled = false;
         submitButton.classList.remove("loading");
         submitButton.innerHTML = originalHTML;
 
-        showError(
-          "Unable to save your session. Please check browser storage settings."
-        );
+        showError("Unable to save your session.");
 
         return;
       }
@@ -333,26 +407,44 @@ document.addEventListener("DOMContentLoaded", () => {
           ? "Beauty Partner"
           : "Customer";
 
-      showSuccess(
-        currentTab === "up"
-          ? `Account created successfully! Welcome, ${nameValue}.`
-          : `Welcome back! Redirecting to your ${roleName} dashboard...`
-      );
+      if (isSignup) {
+
+        showSuccess(
+          `Account details validated! Welcome, ${nameValue}.`
+        );
+
+      } else {
+
+        showSuccess(
+          `Welcome back! Redirecting to your ${roleName} dashboard...`
+        );
+
+      }
 
       // =========================================
       // REDIRECT
       // =========================================
 
-      const dashboard =
-        role === "partner"
-          ? "partner-dashboard.html"
-          : "customer-dashboard.html";
+      if (!isSignup) {
 
-      setTimeout(() => {
-        window.location.href = dashboard;
-      }, 1000);
+        const dashboard =
+          role === "partner"
+            ? "partner-dashboard.html"
+            : "customer-dashboard.html";
 
-    }, 800);
+        setTimeout(() => {
+          window.location.href = dashboard;
+        }, 1000);
+
+      } else {
+
+        submitButton.disabled = false;
+        submitButton.classList.remove("loading");
+        submitButton.innerHTML = originalHTML;
+
+      }
+
+    }, 1000);
 
   });
 
@@ -360,13 +452,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // CLOSE BUTTON
   // =========================================
 
-  if (closeButton) {
-
-    closeButton.addEventListener("click", () => {
-      window.location.href = "index.html";
-    });
-
-  }
+  closeButton?.addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
 
   // =========================================
   // INITIAL STATE

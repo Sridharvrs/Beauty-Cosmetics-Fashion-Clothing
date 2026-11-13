@@ -171,81 +171,115 @@
         </div>
 
         <!-- FORM -->
-        <form id="lf" novalidate>
 
-          <label class="nmf" hidden>
-            Full Name
+<form id="lf" novalidate>
 
-            <span class="input-wrap">
-              <i class="fa-regular fa-user"></i>
-              <input
-                id="ln"
-                type="text"
-                placeholder="Enter your full name"
-                autocomplete="name"
-              >
-            </span>
-          </label>
+  <!-- FULL NAME -->
+  <label class="nmf" hidden>
+    Full Name
 
-          <label>
-            Email Address
+    <span class="input-wrap">
+      <i class="fa-regular fa-user"></i>
+      <input
+        id="ln"
+        type="text"
+        placeholder="Enter your full name"
+        autocomplete="name"
+      >
+    </span>
+  </label>
 
-            <span class="input-wrap">
-              <i class="fa-regular fa-envelope"></i>
-              <input
-                id="le"
-                type="email"
-                placeholder="Enter your email address"
-                autocomplete="email"
-              >
-            </span>
-          </label>
+  <!-- EMAIL -->
+  <label>
+    Email Address
 
-          <label>
-            Password
+    <span class="input-wrap">
+      <i class="fa-regular fa-envelope"></i>
+      <input
+        id="le"
+        type="email"
+        placeholder="Enter your email address"
+        autocomplete="email"
+      >
+    </span>
+  </label>
 
-            <span class="input-wrap pw">
-              <i class="fa-solid fa-lock"></i>
+  <!-- PASSWORD -->
+  <label>
+    Password
 
-              <input
-                id="lp"
-                type="password"
-                placeholder="Enter your password"
-                autocomplete="current-password"
-              >
+    <span class="input-wrap pw">
+      <i class="fa-solid fa-lock"></i>
 
-              <button type="button" id="eye" aria-label="Show password">
-                <i class="fa-solid fa-eye"></i>
-              </button>
+      <input
+        id="lp"
+        type="password"
+        placeholder="Enter your password"
+        autocomplete="new-password"
+      >
 
-            </span>
-          </label>
-          
-          <div class="login-options">
-            <label class="remember-me">
-              <input type="checkbox" id="rememberMe">
-              <span>Remember me</span>
-            </label>
-          
-            <a href="forgot-password.html" class="forgot-link">
-              Forgot password?
-            </a>
-          </div>
+      <button type="button" id="eye" aria-label="Show password">
+        <i class="fa-solid fa-eye"></i>
+      </button>
+    </span>
+  </label>
 
+  <!-- CONFIRM PASSWORD -->
+  <label class="confirm-password-field" hidden>
+    Confirm Password
 
-          <!-- <div class="form-note">
-            <span><i class="fa-solid fa-shield-halved"></i> Secure access</span>
-            <span>Minimum 6 characters</span>
-          </div> -->
+    <span class="input-wrap pw">
+      <i class="fa-solid fa-lock"></i>
 
-          <button class="btn full" id="sub" type="submit">
-            Sign in as Customer
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
+      <input
+        id="confirmPassword"
+        type="password"
+        placeholder="Confirm your password"
+        autocomplete="new-password"
+      >
 
-          <p id="lm" role="status" aria-live="polite"></p>
+      <button
+        type="button"
+        id="toggleConfirmPassword"
+        aria-label="Show password"
+      >
+        <i class="fa-solid fa-eye"></i>
+      </button>
+    </span>
+  </label>
 
-        </form>
+  <!-- REMEMBER / FORGOT -->
+  <div class="login-options signin-options">
+    <label class="remember-me">
+      <input type="checkbox" id="rememberMe">
+      <span>Remember me</span>
+    </label>
+
+    <a href="forgot-password.html" class="forgot-link">
+      Forgot password?
+    </a>
+  </div>
+
+  <!-- TERMS -->
+  <label class="signup-terms" hidden>
+    <input type="checkbox" name="terms">
+    <span>
+      I agree to the
+      <a href="#">Terms & Privacy Policy</a>
+    </span>
+  </label>
+
+  <!-- SUBMIT -->
+  <button class="btn full" id="sub" type="submit">
+    Sign in as Customer
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+
+  <!-- MESSAGE -->
+  <p id="lm" role="status" aria-live="polite"></p>
+
+</form>
+
 
         <div class="card-footer">
           <span>By continuing, you agree to our</span>

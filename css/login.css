@@ -934,3 +934,43 @@
   color: var(--gold);
   text-decoration: underline;
 }
+
+
+/* SIGNUP EXTRA FIELDS */
+
+.confirm-password-field[hidden],
+.signup-terms[hidden],
+.signin-options[hidden],
+.nmf[hidden] {
+  display: none !important;
+}
+
+.signup-terms {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 5px 0 15px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.signup-terms input {
+  margin-top: 4px;
+  accent-color: var(--primary);
+  flex-shrink: 0;
+}
+
+.signup-terms a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#lm {
+  display: none;
+}
+
+#lm.show {
+  display: block;
+}
