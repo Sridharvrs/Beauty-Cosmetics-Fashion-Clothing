@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fashion | Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,800;1,600&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/fashion.css" />
+  </head>
+  <body class="pg-fashion">
+    <header class="top">
+      <a class="logo" href="index.html">
+        <img src="images/logo.webp" alt="Stackly Logo">
+      </a>
+      <button class="burger" aria-label="Menu" aria-expanded="false">
+        <i></i><i></i><i></i>
+      </button>
+      <nav class="nav">
+        <a href="index.html" class="">Home</a>
+        <a href="cosmetics.html" class="">Cosmetics</a>
+        <a href="fashion.html" class="on">Fashion</a>
+        <a href="about.html" class="">About</a>
+        <a href="contact.html" class="">Contact</a>
+        <a href="login.html" class="btn login-btn">Login</a>
+      </nav>
+    </header>
+    <div class="scrim"></div>
+    <section class="hero">
+      <canvas id="petals"></canvas>
+      <div class="hbg">
+        <img
+          src="images/img4.webp"
+          alt=""
+          loading="lazy"
+          onerror="this.style.visibility = 'hidden'"
+        />
+      </div>
+      <div class="wrap hin">
+        <span class="pill">New season</span>
+        <h1 class="shim">Fashion cut for real life</h1>
+        <p>Slow-made silhouettes in breathable, ethical fabrics.</p>
+        <div class="hbtn">
+          <a class="btn" href="error.html">Browse Collection</a
+          ><a class="btn ghost" href="error.html">Mix an outfit</a>
+        </div>
+      </div>
+      <div class="spin">
+        <svg viewBox="0 0 120 120">
+          <defs>
+            <path
+              id="c"
+              d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"
+            />
+          </defs>
+          <text>
+            <textPath href="#c">Beauty • Fashion • Beauty • Fashion •</textPath>
+          </text>
+          </svg><b>♥</b>
+      </div>
+    </section>
+
+
+<!-- ======================== COLLECTION ======================== -->
+<section class="sec s-lav fashion-collection" id="coll">
+  <div class="wrap">
+
+    <div class="collection-head reveal">
+      <div class="collection-heading">
+        <span class="fashion-kicker">THE Stack EDIT · 2026</span>
+        <h2>The Collection<span>.</span></h2>
+        <p>Thoughtfully curated pieces. Effortless style. Made to be yours.</p>
+      </div>
+
+      <div class="collection-count">
+        <strong>06</strong>
+        <span>CURATED PIECES</span>
+      </div>
+    </div>
+
+    <div class="collection-toolbar reveal">
+      <div class="collection-label">
+        <span class="toolbar-line"></span>
+        <span>EXPLORE BY STYLE</span>
+      </div>
+
+      <div class="chips">
+        <button class="on" data-f="all">All Pieces <span>06</span></button>
+        <button data-f="dress">Dresses <span>02</span></button>
+        <button data-f="street">Streetwear <span>02</span></button>
+        <button data-f="work">Workwear <span>02</span></button>
+      </div>
+    </div>
+
+    <div class="collection-grid grid">
+
+      <!-- PRODUCT 01 -->
+      <article class="card collection-card reveal" data-cat="dress">
+        <div class="ci collection-image">
+          <img
+            src="images/img9.webp"
+            alt="stackwood Wrap Dress"
+            loading="lazy"
+            onerror="this.style.visibility='hidden'"
+          />
+          <span class="product-label">BESTSELLER</span>
+          <span class="product-number">01 / 06</span>
+        </div>
+        <div class="cb collection-info">
+          <div class="product-meta">
+            <span>DRESSES</span>
+            <span>01</span>
+          </div>
+          <h3>stackwood Wrap Dress</h3>
+          <p>Fluid elegance with a beautifully relaxed silhouette.</p>
+          <div class="product-bottom">
+            <strong>₹2,799</strong>
+            <a href="error.html" aria-label="Explore stackwood Wrap Dress">Explore <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCT 02 -->
+      <article class="card collection-card reveal" data-cat="dress">
+        <div class="ci collection-image">
+          <img
+            src="images/img4.webp"
+            alt="Garden Midi"
+            loading="lazy"
+            onerror="this.style.visibility='hidden'"
+          />
+          <span class="product-label">NEW ARRIVAL</span>
+          <span class="product-number">02 / 06</span>
+        </div>
+        <div class="cb collection-info">
+          <div class="product-meta">
+            <span>DRESSES</span>
+            <span>02</span>
+          </div>
+          <h3>Garden Midi</h3>
+          <p>A soft floral statement for your everyday moments.</p>
+          <div class="product-bottom">
+            <strong>₹2,399</strong>
+            <a href="error.html" aria-label="Explore Garden Midi">Explore <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCT 03 -->
+      <article class="card collection-card reveal" data-cat="street">
+        <div class="ci collection-image">
+          <img
+            src="images/img5.webp"
+            alt="Oversized Hoodie"
+            loading="lazy"
+            onerror="this.style.visibility='hidden'"
+          />
+          <span class="product-label">EVERYDAY PICK</span>
+          <span class="product-number">03 / 06</span>
+        </div>
+        <div class="cb collection-info">
+          <div class="product-meta">
+            <span>STREETWEAR</span>
+            <span>03</span>
+          </div>
+          <h3>Oversized Hoodie</h3>
+          <p>Laid-back comfort in soft organic cotton.</p>
+          <div class="product-bottom">
+            <strong>₹1,899</strong>
+            <a href="error.html" aria-label="Explore Oversized Hoodie">Explore <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCT 04 -->
+      <article class="card collection-card reveal" data-cat="street">
+        <div class="ci collection-image">
+          <img
+            src="images/img21.webp"
+            alt="Cargo Layer Set"
+            loading="lazy"
+            onerror="this.style.visibility='hidden'"
+          />
+          <span class="product-label">STYLE ESSENTIAL</span>
+          <span class="product-number">04 / 06</span>
+        </div>
+        <div class="cb collection-info">
+          <div class="product-meta">
+            <span>STREETWEAR</span>
+            <span>04</span>
+          </div>
+          <h3>Cargo Layer Set</h3>
+          <p>Modern utility meets an effortlessly relaxed fit.</p>
+          <div class="product-bottom">
+            <strong>₹2,599</strong>
+            <a href="error.html" aria-label="Explore Cargo Layer Set">Explore <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCT 05 -->
+      <article class="card collection-card reveal" data-cat="work">
+        <div class="ci collection-image">
+          <img
+            src="images/img22.webp"
+            alt="Tailored Blazer"
+            loading="lazy"
+            onerror="this.style.visibility='hidden'"
+          />
+          <span class="product-label">ATELIER SELECT</span>
+          <span class="product-number">05 / 06</span>
+        </div>
+        <div class="cb collection-info">
+          <div class="product-meta">
+            <span>WORKWEAR</span>
+            <span>05</span>
+          </div>
+          <h3>Tailored Blazer</h3>
+          <p>Sharp tailoring for a confident everyday look.</p>
+          <div class="product-bottom">
+            <strong>₹3,299</strong>
+            <a href="error.html" aria-label="Explore Tailored Blazer">Explore <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCT 06 -->
+      <article class="card collection-card reveal" data-cat="work">
+        <div class="ci collection-image">
+          <img
+            src="images/img10.webp"
+            alt="Everyday Co-ord"
+            loading="lazy"
+            onerror="this.style.visibility='hidden'"
+          />
+          <span class="product-label">SIGNATURE LOOK</span>
+          <span class="product-number">06 / 06</span>
+        </div>
+        <div class="cb collection-info">
+          <div class="product-meta">
+            <span>WORKWEAR</span>
+            <span>06</span>
+          </div>
+          <h3>Everyday Co-ord</h3>
+          <p>A coordinated essential designed for effortless dressing.</p>
+          <div class="product-bottom">
+            <strong>₹2,199</strong>
+            <a href="error.html" aria-label="Explore Everyday Co-ord">Explore <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="collection-bottom reveal">
+      <span>GOOD STYLE IS ALWAYS IN SEASON.</span>
+      <a href="error.html">Discover the style edit <span>↗</span></a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ===== THE STYLE EDIT ===== -->
+<section class="sec s-cream fashion-edit" id="style-edit">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="fashion-kicker">CURATED BY Stack</span>
+      <h2>The Style Edit</h2>
+      <p>Three moods. Endless ways to make them yours.</p>
+    </div>
+
+    <div class="edit-grid">
+      <article class="edit-card edit-tall reveal">
+        <img src="images/img12.webp" alt="Elegant everyday fashion">
+        <div class="edit-overlay">
+          <span>01 — EVERYDAY ELEGANCE</span>
+          <h3>Effortlessly You</h3>
+          <p>Relaxed silhouettes for beautiful everyday moments.</p>
+          <a href="error.html">EXPLORE THE LOOK ↗</a>
+        </div>
+      </article>
+
+      <article class="edit-card reveal">
+        <img src="images/img11.webp" alt="Modern feminine outfit">
+        <div class="edit-overlay">
+          <span>02 — MODERN FEMININE</span>
+          <h3>Soft Statements</h3>
+          <p>Graceful details with a confident edge.</p>
+          <a href="error.html">EXPLORE THE LOOK ↗</a>
+        </div>
+      </article>
+
+      <article class="edit-card reveal">
+        <img src="images/img23.webp" alt="Contemporary street style">
+        <div class="edit-overlay">
+          <span>03 — CITY MOOD</span>
+          <h3>Own Your Moment</h3>
+          <p>Contemporary pieces made to stand out.</p>
+          <a href="error.html">EXPLORE THE LOOK ↗</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== OUTFIT MIXER ======================== -->
+    <section class="sec s-violet" id="mix">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Outfit mixer</h2>
+          <p>Press the arrows to swap pieces.</p>
+        </div>
+        <div class="mixer reveal">
+          <div class="mrow" data-row="Top">
+            <button class="pv" aria-label="Previous">‹</button>
+            <div class="mimg">
+              <img
+                src="images/img5.webp"
+                alt=""
+                loading="lazy"
+                onerror="this.style.visibility = 'hidden'"
+              />
+            </div>
+            <button class="nx" aria-label="Next">›</button>
+            <p>Top</p>
+          </div>
+          <div class="mrow" data-row="Layer">
+            <button class="pv" aria-label="Previous">‹</button>
+            <div class="mimg">
+              <img
+                src="images/img22.webp"
+                alt=""
+                loading="lazy"
+                onerror="this.style.visibility = 'hidden'"
+              />
+            </div>
+            <button class="nx" aria-label="Next">›</button>
+            <p>Layer</p>
+          </div>
+          <div class="mrow" data-row="Style">
+            <button class="pv" aria-label="Previous">‹</button>
+            <div class="mimg">
+              <img
+                src="images/img21.webp"
+                alt=""
+                loading="lazy"
+                onerror="this.style.visibility = 'hidden'"
+              />
+            </div>
+            <button class="nx" aria-label="Next">›</button>
+            <p>Style</p>
+          </div>
+        </div>
+        <p class="mixnote reveal" id="mixnote">Look 1 of 3: Soft street</p>
+      </div>
+    </section>
+
+<!-- ======================== FABRIC FACTS ======================== -->
+    <section class="sec s-cream" id="">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Fabric facts</h2>
+          <p></p>
+        </div>
+        <div class="stats">
+          <div class="stat reveal">
+            <b data-n="100">0</b><span>% Organic cotton lines</span>
+          </div>
+          <div class="stat reveal">
+            <b data-n="24">0</b><span>Partner weavers</span>
+          </div>
+          <div class="stat reveal">
+            <b data-n="8">0</b><span>Sizes XS–4XL</span>
+          </div>
+          <div class="stat reveal">
+            <b data-n="14">0</b><span>Days free exchange</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- ===== DRESS FOR EVERY MOMENT ===== -->
+<section class="sec s-violet occasion-section" id="occasions">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="fashion-kicker">MADE FOR YOUR MOMENTS</span>
+      <h2>Dress for Every Moment</h2>
+      <p>Whatever the occasion, find a look that feels like you.</p>
+    </div>
+
+    <div class="occasion-grid">
+      <a href="#coll" class="occasion-card reveal">
+        <img src="images/img9.webp" alt="Weekend casual outfit">
+        <div class="occasion-info">
+          <span>01 / OFF-DUTY</span>
+          <h3>Weekend Ease</h3>
+          <p>Comfort meets effortless style.</p>
+          <b>DISCOVER THE LOOK ↗</b>
+        </div>
+      </a>
+
+      <a href="#coll" class="occasion-card reveal">
+        <img src="images/img24.webp" alt="Elegant evening outfit">
+        <div class="occasion-info">
+          <span>02 / AFTER HOURS</span>
+          <h3>Evening Grace</h3>
+          <p>Make every entrance memorable.</p>
+          <b>DISCOVER THE LOOK ↗</b>
+        </div>
+      </a>
+
+      <a href="#coll" class="occasion-card reveal">
+        <img src="images/img25.webp" alt="Professional workwear">
+        <div class="occasion-info">
+          <span>03 / WORK MODE</span>
+          <h3>Power Dressing</h3>
+          <p>Confidence in every detail.</p>
+          <b>DISCOVER THE LOOK ↗</b>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOOKBOOK ===================== -->
+    <section class="sec s-blush" id="">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Lookbook</h2>
+          <p>Photographed in our Chennai studio.</p>
+        </div>
+        <div class="gal">
+          <figure class="reveal">
+            <img
+              src="images/img12.webp"
+              alt=""
+              loading="lazy"
+              onerror="this.style.visibility = 'hidden'"
+            />
+          </figure>
+          <figure class="reveal">
+            <img
+              src="images/img26.webp"
+              alt=""
+              loading="lazy"
+              onerror="this.style.visibility = 'hidden'"
+            />
+          </figure>
+          <figure class="reveal">
+            <img
+              src="images/img27.webp"
+              alt=""
+              loading="lazy"
+              onerror="this.style.visibility = 'hidden'"
+            />
+          </figure>
+          <figure class="reveal">
+            <img
+              src="images/img5.webp"
+              alt=""
+              loading="lazy"
+              onerror="this.style.visibility = 'hidden'"
+            />
+          </figure>
+          <figure class="reveal">
+            <img
+              src="images/img10.webp"
+              alt=""
+              loading="lazy"
+              onerror="this.style.visibility = 'hidden'"
+            />
+          </figure>
+          <figure class="reveal">
+            <img
+              src="images/img21.webp"
+              alt=""
+              loading="lazy"
+              onerror="this.style.visibility = 'hidden'"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+<!-- ======================== Design ======================== -->
+    <!-- <section class="sec s-gold" id="">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Sustainable by design</h2>
+          <p>Good clothes, lighter footprint.</p>
+        </div>
+        <div class="split rev">
+          <div class="sp-img reveal">
+            <img
+              src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=900&q=80"
+              alt=""
+              loading="lazy"
+              onerror="this.style.visibility = 'hidden'"
+            /><span class="blob"></span>
+          </div>
+          <div class="sp-tx reveal">
+            <h3>Clothing with a clean conscience</h3>
+            <p>
+              Every garment has a traceable fabric story and ships in
+              compostable mailers.
+            </p>
+            <ul class="tick">
+              <li>Natural dyes on the autumn range</li>
+              <li>Offcuts upcycled into scrunchies</li>
+              <li>Repair service for two years</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+<!-- ===== THE ATELIER PROMISE ===== -->
+<section class="sec s-blush promise-section" id="atelier-promise">
+  <div class="wrap">
+    <div class="promise-layout">
+      <div class="promise-visual reveal">
+        <img src="images/img26.webp" alt="Fashion garment craftsmanship">
+        <div class="promise-stamp">
+          <span>THE Stack</span>
+          <b>ATELIER</b>
+          <span>DETAILS MATTER ✦</span>
+        </div>
+      </div>
+
+      <div class="promise-content reveal">
+        <span class="fashion-kicker">MORE THAN JUST FASHION</span>
+        <h2>Made with Intention. Worn with Confidence.</h2>
+        <p class="promise-intro">
+          We believe great style is more than what you wear.
+          It is how every detail makes you feel.
+        </p>
+
+        <div class="promise-point">
+          <span>01</span>
+          <div>
+            <h3>Thoughtful Details</h3>
+            <p>Considered silhouettes, beautiful finishes and little details that matter.</p>
+          </div>
+        </div>
+
+        <div class="promise-point">
+          <span>02</span>
+          <div>
+            <h3>Comfort Comes First</h3>
+            <p>Easy-to-wear styles designed to move naturally with you.</p>
+          </div>
+        </div>
+
+        <div class="promise-point">
+          <span>03</span>
+          <div>
+            <h3>Your Style, Your Story</h3>
+            <p>Pieces that let your personality take centre stage.</p>
+          </div>
+        </div>
+
+        <a href="error.html" class="promise-link">DISCOVER OUR STORY ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FIND YOUR SIZE ===== -->
+    <section class="sec s-stack" id="">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Find your size</h2>
+          <p></p>
+        </div>
+        <div class="ctabox reveal">
+          <h3>Not sure of your size?</h3>
+          <p>Our stylists will guide you on WhatsApp in under 5 minutes.</p>
+          <a class="btn gold" href="error.html">Talk to a stylist</a>
+        </div>
+      </div>
+    </section>
+
+
+<!-- ================= stack ATELIER FOOTER ================= -->
+<footer class="stack-footer">
+  <div class="wrap">
+
+    <div class="stack-footer-grid">
+
+      <!-- BRAND -->
+      <div class="stack-footer-brand">
+        <a class="logo" href="index.html">
+          <img src="images/logo.webp" alt="Stackly Logo">
+        </a>
+
+        <p>
+          Beauty, fashion and self-expression come together
+          at Stackly. Discover thoughtfully created
+          cosmetics and timeless styles made to celebrate you.
+        </p>
+
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="stack-footer-col">
+        <h5>Explore</h5>
+        <a href="index.html">Home</a>
+        <a href="cosmetics.html">Cosmetics</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <!-- CUSTOMER CARE -->
+      <div class="stack-footer-col">
+        <h5>Customer Care</h5>
+        <a href="contact.html">Help & Support</a>
+        <a href="login.html">My Account</a>
+        <a href="error.html">Shipping Information</a>
+        <a href="error.html">Returns & Exchanges</a>
+        <a href="error.html">Privacy Policy</a>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="stack-footer-col stack-newsletter">
+        <h5>Stay in Bloom</h5>
+
+        <p>
+          Join our little world of beauty and style.
+          Get the latest collections, inspiration and updates.
+        </p>
+
+        <form class="stack-newsletter-form">
+          <input
+            type="email"
+            placeholder="Your email address"
+            aria-label="Your email address"
+            required
+          >
+
+          <button type="submit" aria-label="Subscribe">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <span class="newsletter-note">
+          A little beauty inspiration, straight to your inbox.
+        </span>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="stack-footer-bottom">
+      <span>
+        &copy; 2026 Stackly. All rights reserved.
+      </span>
+
+      <div class="footer-bottom-links">
+        <a href="error.html">Privacy</a>
+        <a href="error.html">Terms</a>
+      </div>
+
+      <span class="footer-made">
+        Made with <i class="fa-solid fa-heart"></i>
+        for every kind of beauty.
+      </span>
+    </div>
+
+  </div>
+</footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/fashion.js"></script>
+  </body>
+</html>

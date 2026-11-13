@@ -1,0 +1,1223 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard | Rose Atelier</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/dash-core.css">
+  <link rel="stylesheet" href="css/customer-dashboard.css">
+</head>
+
+<body class="dash cust">
+
+<div class="app">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="side" id="side">
+
+    <a class="logo" href="index.html">
+      <img src="images/logo.webp" alt="Stackly Logo">
+    </a>
+
+    <div class="who">
+      <div class="av avatar">AS</div>
+      <div>
+        <b class="profileName">Aanya Sharma</b>
+        <small class="profileEmail">aanya@email.com</small>
+      </div>
+    </div>
+
+    <nav class="menu">
+
+      <button class="mb on" data-m="overview">
+        <span class="ic">🏠</span>
+        Overview
+      </button>
+
+      <button class="mb" data-m="orders">
+        <span class="ic">📦</span>
+        My Orders
+        <span class="cnt">2</span>
+      </button>
+
+      <button class="mb" data-m="wishlist">
+        <span class="ic">💖</span>
+        Wishlist
+      </button>
+
+      <button class="mb" data-m="profile">
+        <span class="ic">💄</span>
+        Beauty Profile
+      </button>
+
+      <button class="mb" data-m="rewards">
+        <span class="ic">⭐</span>
+        Rewards
+      </button>
+
+      <button class="mb" data-m="settings">
+        <span class="ic">⚙️</span>
+        Settings
+      </button>
+
+    </nav>
+
+    <button class="logout" id="lo" type="button">
+      ↪ Logout
+    </button>
+
+  </aside>
+
+
+  <!-- ================= MAIN ================= -->
+  <div class="main">
+
+    <!-- ================= TOPBAR ================= -->
+    <header class="topbar" id="top">
+
+      <button class="burger" type="button" aria-label="Open sidebar">
+        ☰
+      </button>
+
+      <h2 id="ttl">Overview</h2>
+
+      <div style="position:relative;display:flex;align-items:center;gap:12px">
+
+        <button class="ibtn" id="bell" type="button" aria-label="Notifications">
+          ♡
+          <i>3</i>
+        </button>
+
+        <div class="drop" id="drop">
+          <p>📦 Order RA-10482 shipped</p>
+          <p>📉 Glow Serum price dropped</p>
+          <p>⭐ 550 points to Gold tier</p>
+        </div>
+
+        <div class="av">AS</div>
+
+      </div>
+
+    </header>
+
+
+    <!-- ================= DASHBOARD CONTENT ================= -->
+    <main id="view">
+
+      <!-- ================= OVERVIEW ================= -->
+      <section class="dashboard-section mod" id="overview">
+
+        <div class="hero">
+
+          <div>
+            <h3>Good to see you, <span class="profileName">Aanya</span>!</h3>
+            <p>
+              Your order RA-10482 is on its way and arrives on 13 Nov.
+              You are 550 points away from Rose Gold tier.
+            </p>
+            <br>
+            <a class="btn g" href="#orders">Track order</a>
+          </div>
+
+          <div class="ring" style="--p:82%">
+            <div>
+              <span>2,450<small>points</small></span>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="grid k4">
+
+          <div class="kpi">
+            <div class="ki">📦</div>
+            <div>
+              <small>Total orders</small>
+              <b>12</b>
+              <em class="up">2 this month</em>
+            </div>
+          </div>
+
+          <div class="kpi">
+            <div class="ki">💖</div>
+            <div>
+              <small>Wishlist</small>
+              <b id="wishCount">6</b>
+              <em class="up">1 price drop</em>
+            </div>
+          </div>
+
+          <div class="kpi">
+            <div class="ki">⭐</div>
+            <div>
+              <small>Reward points</small>
+              <b>2,450</b>
+              <em class="up">+180 this month</em>
+            </div>
+          </div>
+
+          <div class="kpi">
+            <div class="ki">🏷️</div>
+            <div>
+              <small>Total saved</small>
+              <b>₹3,240</b>
+              <em class="up">12% vs list</em>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="grid gm">
+
+          <section class="panel">
+            <header>
+              <h3>Live order tracker</h3>
+              <span>Arrives 13 Nov</span>
+            </header>
+
+            <div class="pb">
+
+              <div class="steps">
+                <div class="stp d"><b>✓</b><small>Placed</small></div>
+                <div class="stp d"><b>✓</b><small>Packed</small></div>
+                <div class="stp d c"><b>3</b><small>Shipped</small></div>
+                <div class="stp"><b>4</b><small>Out for delivery</small></div>
+                <div class="stp"><b>5</b><small>Delivered</small></div>
+              </div>
+
+              <div class="li">
+                <div class="t">
+                  <b>RA-10482</b>
+                  <small>Velvet Rouge Lipstick, Cloud Brush Set · ₹2,398</small>
+                </div>
+                <a class="btn sm" href="#orders">Details</a>
+              </div>
+
+            </div>
+          </section>
+
+
+          <section class="panel">
+            <header>
+              <h3>Spend by category</h3>
+            </header>
+
+            <div class="pb">
+              <div class="dn-w">
+
+                <div class="donut" style="background:conic-gradient(#e0245e 0 27%,#f4c26b 27% 43%,#7a4bd6 43% 93%,#e9a2bd 93% 100%)">
+                  <div>
+                    ₹19,500
+                    <small>12 months</small>
+                  </div>
+                </div>
+
+                <div class="leg">
+                  <span><i style="background:#e0245e"></i>Cosmetics · ₹5,200</span>
+                  <span><i style="background:#f4c26b"></i>Skincare · ₹3,100</span>
+                  <span><i style="background:#7a4bd6"></i>Fashion · ₹9,800</span>
+                  <span><i style="background:#e9a2bd"></i>Accessories · ₹1,400</span>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+
+        <div class="grid g2">
+
+          <section class="panel">
+            <header>
+              <h3>Monthly spending</h3>
+              <span>Last 6 months</span>
+            </header>
+
+            <div class="pb">
+              <div class="bars">
+                <div class="bc"><b>₹1.8k</b><i style="height:35%"></i><small>Jun</small></div>
+                <div class="bc"><b>₹3.2k</b><i style="height:63%"></i><small>Jul</small></div>
+                <div class="bc"><b>₹2.4k</b><i style="height:47%"></i><small>Aug</small></div>
+                <div class="bc"><b>₹4.1k</b><i style="height:80%"></i><small>Sep</small></div>
+                <div class="bc"><b>₹2.9k</b><i style="height:57%"></i><small>Oct</small></div>
+                <div class="bc"><b>₹5.1k</b><i style="height:100%"></i><small>Nov</small></div>
+              </div>
+            </div>
+          </section>
+
+
+          <section class="panel">
+            <header>
+              <h3>Today for you</h3>
+            </header>
+
+            <div class="pb">
+              <div class="list">
+
+                <div class="li">
+                  <span class="dot">🌞</span>
+                  <div class="t">
+                    <b>Morning routine due</b>
+                    <small>Vitamin C serum then SPF</small>
+                  </div>
+                </div>
+
+                <div class="li">
+                  <span class="dot">🎁</span>
+                  <div class="t">
+                    <b>Birthday gift ready</b>
+                    <small>Claim your full-size lipstick</small>
+                  </div>
+                </div>
+
+                <div class="li">
+                  <span class="dot">📉</span>
+                  <div class="t">
+                    <b>Price drop</b>
+                    <small>Glow Serum is now ₹1,099</small>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+
+        <section class="panel">
+          <header>
+            <h3>Recommended for your skin and style</h3>
+            <span>Based on your beauty profile</span>
+          </header>
+
+<div class="pb">
+  <div class="pc">
+
+    <!-- PRODUCT 1 -->
+    <div class="pcard">
+      <div class="im">
+        <img src="images/img26.webp" alt="Rosewood Wrap Dress">
+      </div>
+      <div class="bd">
+        <h4>Rosewood Wrap Dress</h4>
+        <span class="price"><b>₹2,799</b></span>
+        <div class="row">
+          <button class="btn sm" data-add="Rosewood Wrap Dress">Add to bag</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="pcard">
+      <div class="im">
+        <img src="images/img13.webp" alt="Velvet Rouge Lipstick">
+      </div>
+      <div class="bd">
+        <h4>Velvet Rouge Lipstick</h4>
+        <span class="price"><b>₹899</b></span>
+        <div class="row">
+          <button class="btn sm" data-add="Velvet Rouge Lipstick">Add to bag</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="pcard">
+      <div class="im">
+        <img src="images/img2.webp" alt="Cloud Brush Set">
+      </div>
+      <div class="bd">
+        <h4>Cloud Brush Set</h4>
+        <span class="price"><b>₹1,499</b></span>
+        <div class="row">
+          <button class="btn sm" data-add="Cloud Brush Set">Add to bag</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="pcard">
+      <div class="im">
+        <img src="images/img16.webp" alt="Barrier Cream">
+      </div>
+      <div class="bd">
+        <h4>Barrier Cream</h4>
+        <span class="price"><b>₹949</b></span>
+        <div class="row">
+          <button class="btn sm" data-add="Barrier Cream">Add to bag</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+        </section>
+
+      </section>
+
+
+      <!-- ================= MY ORDERS ================= -->
+      <section class="dashboard-section mod" id="orders" hidden>
+
+        <div class="grid k4">
+
+          <div class="kpi"><div class="ki">🚚</div><div><small>Active orders</small><b>2</b><em class="up">1 arriving soon</em></div></div>
+
+          <div class="kpi"><div class="ki">✅</div><div><small>Delivered</small><b>8</b><em class="up">all on time</em></div></div>
+
+          <div class="kpi"><div class="ki">↩️</div><div><small>Returns</small><b>1</b><em class="dn">refund issued</em></div></div>
+
+          <div class="kpi"><div class="ki">💳</div><div><small>Lifetime spend</small><b>₹19,500</b><em class="up">+8%</em></div></div>
+
+        </div>
+
+
+        <section class="panel">
+          <header>
+            <h3>Order history</h3>
+            <span>Click Track for live status</span>
+          </header>
+
+          <div class="pb">
+
+            <div class="chips" id="of" style="margin-bottom:14px">
+              <button class="chip on" data-s="All">All</button>
+              <button class="chip" data-s="Processing">Processing</button>
+              <button class="chip" data-s="Shipped">Shipped</button>
+              <button class="chip" data-s="Delivered">Delivered</button>
+              <button class="chip" data-s="Cancelled">Cancelled</button>
+            </div>
+
+            <div class="tw">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Order</th>
+                    <th>Date</th>
+                    <th>Items</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+
+                <tbody id="orderRows">
+
+                  <tr>
+                    <td><b>RA-10482</b></td>
+                    <td>08 Nov 2026</td>
+                    <td>Velvet Rouge Lipstick, Cloud Brush Set</td>
+                    <td>₹2,398</td>
+                    <td><span class="bdg b-shipped">Shipped</span></td>
+                    <td><button class="btn sm o" data-track="RA-10482">Track</button></td>
+                  </tr>
+
+                  <tr>
+                    <td><b>RA-10455</b></td>
+                    <td>02 Nov 2026</td>
+                    <td>Rosewood Wrap Dress</td>
+                    <td>₹2,799</td>
+                    <td><span class="bdg b-processing">Processing</span></td>
+                    <td><button class="btn sm o" data-track="RA-10455">Track</button></td>
+                  </tr>
+
+                  <tr>
+                    <td><b>RA-10391</b></td>
+                    <td>21 Oct 2026</td>
+                    <td>Glow Serum, Barrier Cream</td>
+                    <td>₹2,048</td>
+                    <td><span class="bdg b-delivered">Delivered</span></td>
+                    <td><button class="btn sm o" data-track="RA-10391">Track</button></td>
+                  </tr>
+
+                  <tr>
+                    <td><b>RA-10320</b></td>
+                    <td>09 Oct 2026</td>
+                    <td>Tailored Blazer</td>
+                    <td>₹3,299</td>
+                    <td><span class="bdg b-delivered">Delivered</span></td>
+                    <td><button class="btn sm o" data-track="RA-10320">Track</button></td>
+                  </tr>
+
+                  <tr>
+                    <td><b>RA-10277</b></td>
+                    <td>28 Sep 2026</td>
+                    <td>Eye Palette Dusk</td>
+                    <td>₹1,299</td>
+                    <td><span class="bdg b-cancelled">Cancelled</span></td>
+                    <td><button class="btn sm o" data-track="RA-10277">Track</button></td>
+                  </tr>
+
+                  <tr>
+                    <td><b>RA-10198</b></td>
+                    <td>12 Sep 2026</td>
+                    <td>Everyday Co-ord Set, Satin Blush Duo</td>
+                    <td>₹2,948</td>
+                    <td><span class="bdg b-delivered">Delivered</span></td>
+                    <td><button class="btn sm o" data-track="RA-10198">Track</button></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </section>
+
+
+        <div class="grid g3">
+
+          <section class="panel">
+            <header><h3>Invoice summary</h3></header>
+            <div class="pb">
+              <div class="hb">
+                <div><span>Products</span><u><i style="width:83%"></i></u><b>₹17,400</b></div>
+                <div><span>Shipping</span><u><i style="width:2%"></i></u><b>Free</b></div>
+                <div><span>Taxes</span><u><i style="width:10%"></i></u><b>₹2,100</b></div>
+                <div><span>Discounts</span><u><i style="width:6%"></i></u><b>₹1,200</b></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Return policy</h3></header>
+            <div class="pb">
+              <div class="list">
+                <div class="li"><span class="dot">14</span><div class="t"><b>14-day returns</b><small>Unused items with tags</small></div></div>
+                <div class="li"><span class="dot">🔁</span><div class="t"><b>Free size exchange</b><small>One per order</small></div></div>
+                <div class="li"><span class="dot">💧</span><div class="t"><b>Cosmetics hygiene</b><small>Sealed products only</small></div></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Reorder favourites</h3></header>
+            <div class="pb">
+              <div class="list">
+
+                <div class="li">
+                  <span class="dot">💄</span>
+                  <div class="t"><b>Velvet Rouge Lipstick</b><small>₹899</small></div>
+                  <button class="btn sm o" data-add="Velvet Rouge Lipstick">Reorder</button>
+                </div>
+
+                <div class="li">
+                  <span class="dot">🖌️</span>
+                  <div class="t"><b>Cloud Brush Set</b><small>₹1,499</small></div>
+                  <button class="btn sm o" data-add="Cloud Brush Set">Reorder</button>
+                </div>
+
+                <div class="li">
+                  <span class="dot">🧴</span>
+                  <div class="t"><b>Barrier Cream</b><small>₹949</small></div>
+                  <button class="btn sm o" data-add="Barrier Cream">Reorder</button>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= WISHLIST ================= -->
+      <section class="dashboard-section mod" id="wishlist" hidden>
+
+        <div class="grid k4">
+
+          <div class="kpi"><div class="ki">💖</div><div><small>Saved items</small><b id="savedCount">6</b><em class="up">2 new</em></div></div>
+
+          <div class="kpi"><div class="ki">📉</div><div><small>Price drops</small><b>3</b><em class="up">Save ₹1,400</em></div></div>
+
+          <div class="kpi"><div class="ki">🛍️</div><div><small>Bag value</small><b id="bagValue">₹10,944</b><em class="up">if all bought</em></div></div>
+
+          <div class="kpi"><div class="ki">🎁</div><div><small>Shared lists</small><b>2</b><em class="up">with friends</em></div></div>
+
+        </div>
+
+
+        <section class="panel">
+          <header>
+            <h3>Your wishlist</h3>
+            <span>Move to bag or remove</span>
+          </header>
+
+          <div class="pb">
+            <div class="pc" id="wishlistGrid">
+
+              <div class="pcard" data-wish-card="fc">
+                <div class="im">👗</div>
+                <div class="bd">
+                  <small>Fashion</small>
+                  <h4>Rosewood Wrap Dress</h4>
+                  <span class="price"><b>₹2,799</b><s>₹3,299</s></span>
+                  <div class="row">
+                    <button class="btn sm" data-move="fc">Add to bag</button>
+                    <button class="btn sm o" data-remove="fc">Remove</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pcard" data-wish-card="mk">
+                <div class="im">🎨</div>
+                <div class="bd">
+                  <small>Cosmetics</small>
+                  <h4>Eye Palette Dusk</h4>
+                  <span class="price"><b>₹1,299</b><s>₹1,499</s></span>
+                  <div class="row">
+                    <button class="btn sm" data-move="mk">Add to bag</button>
+                    <button class="btn sm o" data-remove="mk">Remove</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pcard" data-wish-card="fa">
+                <div class="im">🌸</div>
+                <div class="bd">
+                  <small>Fashion</small>
+                  <h4>Garden Midi</h4>
+                  <span class="price"><b>₹2,399</b></span>
+                  <div class="row">
+                    <button class="btn sm" data-move="fa">Add to bag</button>
+                    <button class="btn sm o" data-remove="fa">Remove</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pcard" data-wish-card="sk">
+                <div class="im">🧴</div>
+                <div class="bd">
+                  <small>Skincare</small>
+                  <h4>Glow Serum</h4>
+                  <span class="price"><b>₹1,099</b><s>₹1,299</s></span>
+                  <div class="row">
+                    <button class="btn sm" data-move="sk">Add to bag</button>
+                    <button class="btn sm o" data-remove="sk">Remove</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pcard" data-wish-card="fb">
+                <div class="im">🧥</div>
+                <div class="bd">
+                  <small>Fashion</small>
+                  <h4>Cargo Layer Set</h4>
+                  <span class="price"><b>₹2,599</b></span>
+                  <div class="row">
+                    <button class="btn sm" data-move="fb">Add to bag</button>
+                    <button class="btn sm o" data-remove="fb">Remove</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pcard" data-wish-card="co">
+                <div class="im">💋</div>
+                <div class="bd">
+                  <small>Cosmetics</small>
+                  <h4>Satin Blush Duo</h4>
+                  <span class="price"><b>₹749</b><s>₹899</s></span>
+                  <div class="row">
+                    <button class="btn sm" data-move="co">Add to bag</button>
+                    <button class="btn sm o" data-remove="co">Remove</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <div class="grid g2">
+
+          <section class="panel">
+            <header><h3>Price drop alerts</h3></header>
+            <div class="pb">
+              <div class="list" id="priceAlerts">
+
+                <div class="li">
+                  <span class="dot">📉</span>
+                  <div class="t"><b>Rosewood Wrap Dress</b><small>Dropped from ₹3,299 to ₹2,799</small></div>
+                  <span class="bdg b-active">Active</span>
+                </div>
+
+                <div class="li">
+                  <span class="dot">📉</span>
+                  <div class="t"><b>Eye Palette Dusk</b><small>Dropped from ₹1,499 to ₹1,299</small></div>
+                  <span class="bdg b-active">Active</span>
+                </div>
+
+                <div class="li">
+                  <span class="dot">📉</span>
+                  <div class="t"><b>Glow Serum</b><small>Dropped from ₹1,299 to ₹1,099</small></div>
+                  <span class="bdg b-active">Active</span>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+
+          <section class="panel">
+            <header><h3>Saved looks</h3></header>
+            <div class="pb">
+              <div class="pc" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">
+
+                <div class="pcard">
+                  <div class="im" style="height:120px">👟</div>
+                  <div class="bd"><h4>Weekend street</h4></div>
+                </div>
+
+                <div class="pcard">
+                  <div class="im" style="height:120px">👜</div>
+                  <div class="bd"><h4>Office polish</h4></div>
+                </div>
+
+                <div class="pcard">
+                  <div class="im" style="height:120px">🌷</div>
+                  <div class="bd"><h4>Brunch ready</h4></div>
+                </div>
+
+                <div class="pcard">
+                  <div class="im" style="height:120px">✨</div>
+                  <div class="bd"><h4>Date night</h4></div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+
+        <section class="panel">
+          <header><h3>Gift list sharing</h3></header>
+          <div class="pb">
+            <p style="margin-bottom:12px">Share your wishlist so friends can gift what you love.</p>
+            <div class="code">
+              <span>roseatelier.com/w/aanya-2026</span>
+              <button class="btn sm" id="copyWishlist">Copy link</button>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+
+      <!-- ================= BEAUTY PROFILE ================= -->
+      <section class="dashboard-section mod" id="profile" hidden>
+
+        <div class="grid gm">
+
+          <section class="panel">
+            <header><h3>Skin profile</h3></header>
+            <div class="pb">
+
+              <p style="margin-bottom:8px;font-weight:600">Skin type</p>
+
+              <div class="chips" id="skinTypes">
+                <button class="chip" data-skin="Oily">Oily</button>
+                <button class="chip" data-skin="Dry">Dry</button>
+                <button class="chip on" data-skin="Combination">Combination</button>
+                <button class="chip" data-skin="Sensitive">Sensitive</button>
+              </div>
+
+              <p style="margin:18px 0 8px;font-weight:600">Concerns</p>
+
+              <div class="chips" id="skinConcerns">
+                <button class="chip on" data-concern="Dullness">Dullness</button>
+                <button class="chip on" data-concern="Dark spots">Dark spots</button>
+                <button class="chip" data-concern="Acne">Acne</button>
+                <button class="chip" data-concern="Fine lines">Fine lines</button>
+                <button class="chip" data-concern="Redness">Redness</button>
+                <button class="chip" data-concern="Dark circles">Dark circles</button>
+              </div>
+
+              <p style="margin:18px 0 8px;font-weight:600">Skin tone</p>
+
+              <div class="swt" id="skinTones">
+                <button style="--c:#f5d5c0" data-tone="#f5d5c0" aria-label="Skin tone 1"></button>
+                <button style="--c:#e8b998" data-tone="#e8b998" aria-label="Skin tone 2"></button>
+                <button class="on" style="--c:#e0ac8c" data-tone="#e0ac8c" aria-label="Skin tone 3"></button>
+                <button style="--c:#c68642" data-tone="#c68642" aria-label="Skin tone 4"></button>
+                <button style="--c:#a0673a" data-tone="#a0673a" aria-label="Skin tone 5"></button>
+                <button style="--c:#6b4226" data-tone="#6b4226" aria-label="Skin tone 6"></button>
+              </div>
+
+            </div>
+          </section>
+
+
+          <section class="panel">
+            <header><h3>Profile strength</h3></header>
+            <div class="pb">
+              <div class="prog">
+                <p><span>Completeness</span><b id="profilePercent">76%</b></p>
+                <u><i id="profileProgress" style="width:76%"></i></u>
+              </div>
+              <p style="color:var(--muted)">
+                Complete your profile to unlock shade matches and a 10% welcome offer.
+              </p>
+            </div>
+          </section>
+
+        </div>
+
+
+        <section class="panel">
+          <header>
+            <h3>Your personalised routine</h3>
+            <span>Updates as you change your profile</span>
+          </header>
+
+          <div class="pb">
+            <div class="grid g3" id="routineGrid" style="margin:0">
+
+              <div class="rw">
+                <span class="em">🧼</span>
+                <b>Step 1</b>
+                <span>Gentle gel cleanser</span>
+              </div>
+
+              <div class="rw">
+                <span class="em">💧</span>
+                <b>Step 2</b>
+                <span>Glow Serum (Vitamin C)</span>
+              </div>
+
+              <div class="rw">
+                <span class="em">🧴</span>
+                <b>Step 3</b>
+                <span>Light lotion on T-zone, cream on cheeks</span>
+              </div>
+
+              <div class="rw">
+                <span class="em">☀️</span>
+                <b>Step 4</b>
+                <span>SPF 50 sunscreen</span>
+              </div>
+
+            </div>
+
+            <p id="routineFocus" style="margin-top:14px">
+              Focus areas: <b>Dullness, Dark spots</b>. We suggest a Vitamin C serum in the morning and a gentle exfoliant twice a week.
+            </p>
+          </div>
+        </section>
+
+
+        <div class="grid g2">
+
+          <section class="panel">
+            <header><h3>Fashion sizes</h3></header>
+            <div class="pb">
+
+              <div class="form">
+
+                <label class="f">
+                  Top
+                  <select id="sizeTop">
+                    <option>XS</option>
+                    <option>S</option>
+                    <option selected>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                </label>
+
+                <label class="f">
+                  Bottom (waist)
+                  <select id="sizeBottom">
+                    <option>26</option>
+                    <option>28</option>
+                    <option selected>30</option>
+                    <option>32</option>
+                    <option>34</option>
+                  </select>
+                </label>
+
+                <label class="f">
+                  Shoe (UK)
+                  <select id="sizeShoe">
+                    <option>5</option>
+                    <option>6</option>
+                    <option selected>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                  </select>
+                </label>
+
+              </div>
+
+              <br>
+              <button class="btn" id="saveSizes" type="button">Save sizes</button>
+
+            </div>
+          </section>
+
+
+          <section class="panel">
+            <header><h3>Saved addresses</h3></header>
+            <div class="pb">
+
+              <div class="list">
+
+                <div class="li">
+                  <span class="dot">🏠</span>
+                  <div class="t">
+                    <b>Home</b>
+                    <small>14 Gandhi Road, Hosur, Tamil Nadu 635109</small>
+                  </div>
+                  <span class="bdg b-active">Active</span>
+                </div>
+
+                <div class="li">
+                  <span class="dot">🏢</span>
+                  <div class="t">
+                    <b>Office</b>
+                    <small>Tech Park, Electronic City, Bengaluru 560100</small>
+                  </div>
+                </div>
+
+              </div>
+
+              <br>
+              <button class="btn o sm" type="button" id="addAddress">Add address</button>
+
+            </div>
+          </section>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= REWARDS ================= -->
+      <section class="dashboard-section mod" id="rewards" hidden>
+
+        <div class="hero">
+
+          <div>
+            <h3>Rose tier member</h3>
+            <p>Earn 1 point for every ₹10. Reach 3,000 points to unlock free styling sessions.</p>
+          </div>
+
+          <div class="ring" style="--p:82%">
+            <div>
+              <span id="rewardPoints">2,450<small>points</small></span>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="grid g2">
+
+          <section class="panel">
+            <header><h3>Tier journey</h3></header>
+            <div class="pb">
+
+              <div class="prog">
+                <p><span>Rose to Gold</span><b>2,450 / 3,000</b></p>
+                <u><i style="width:82%"></i></u>
+              </div>
+
+              <div class="tier">
+                <div><b>Blush</b>0+</div>
+                <div class="on"><b>Rose</b>1,000+</div>
+                <div><b>Gold</b>3,000+</div>
+                <div><b>Noir</b>8,000+</div>
+              </div>
+
+            </div>
+          </section>
+
+
+          <section class="panel">
+            <header><h3>Refer a friend</h3></header>
+            <div class="pb">
+
+              <p style="margin-bottom:12px">
+                You both get 500 points when a friend places her first order.
+              </p>
+
+              <div class="code">
+                <span>AANYA500</span>
+                <button class="btn sm" id="copyReferral" type="button">Copy code</button>
+              </div>
+
+              <br>
+
+              <div class="prog">
+                <p><span>Friends joined</span><b>3 of 5</b></p>
+                <u><i style="width:60%"></i></u>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+
+
+        <section class="panel">
+          <header><h3>Redeem rewards</h3></header>
+          <div class="pb">
+
+            <div class="grid g3" style="margin:0">
+
+              <div class="rw">
+                <span class="em">💄</span>
+                <b>Free lipstick</b>
+                <span>1,500 points</span>
+                <button class="btn sm" data-redeem="1500" data-name="Free lipstick">Redeem</button>
+              </div>
+
+              <div class="rw">
+                <span class="em">🚚</span>
+                <b>Free express shipping</b>
+                <span>400 points</span>
+                <button class="btn sm" data-redeem="400" data-name="Free express shipping">Redeem</button>
+              </div>
+
+              <div class="rw">
+                <span class="em">🎫</span>
+                <b>₹500 voucher</b>
+                <span>1,000 points</span>
+                <button class="btn sm" data-redeem="1000" data-name="₹500 voucher">Redeem</button>
+              </div>
+
+              <div class="rw">
+                <span class="em">💆</span>
+                <b>Styling session</b>
+                <span>3,000 points</span>
+                <button class="btn sm" data-redeem="3000" data-name="Styling session">Redeem</button>
+              </div>
+
+              <div class="rw">
+                <span class="em">🧴</span>
+                <b>Mini skincare kit</b>
+                <span>1,200 points</span>
+                <button class="btn sm" data-redeem="1200" data-name="Mini skincare kit">Redeem</button>
+              </div>
+
+              <div class="rw">
+                <span class="em">👜</span>
+                <b>Tote bag</b>
+                <span>800 points</span>
+                <button class="btn sm" data-redeem="800" data-name="Tote bag">Redeem</button>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+
+        <section class="panel">
+          <header><h3>Points history</h3></header>
+          <div class="pb">
+
+            <div class="tw">
+              <table>
+                <thead>
+                  <tr><th>Date</th><th>Activity</th><th>Points</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>08 Nov</td><td>Order RA-10482</td><td><b class="up">+240</b></td></tr>
+                  <tr><td>02 Nov</td><td>Order RA-10455</td><td><b class="up">+280</b></td></tr>
+                  <tr><td>25 Oct</td><td>Product review</td><td><b class="up">+50</b></td></tr>
+                  <tr><td>21 Oct</td><td>Redeemed ₹500 voucher</td><td><b class="dn">-1,000</b></td></tr>
+                  <tr><td>09 Oct</td><td>Order RA-10320</td><td><b class="up">+330</b></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </section>
+
+      </section>
+
+
+      <!-- ================= SETTINGS ================= -->
+      <section class="dashboard-section mod" id="settings" hidden>
+
+        <div class="grid gm">
+
+          <section class="panel">
+            <header><h3>Personal details</h3></header>
+            <div class="pb">
+
+              <form class="form" id="profileForm">
+
+                <label class="f">
+                  Full name
+                  <input name="name" value="Aanya Sharma" required>
+                </label>
+
+                <label class="f">
+                  Email
+                  <input name="email" type="email" value="aanya@email.com" required>
+                </label>
+
+                <label class="f">
+                  Phone
+                  <input name="phone" type="tel" value="+91 98765 43210">
+                </label>
+
+                <label class="f">
+                  Birthday
+                  <input name="birthday" type="date" value="1996-03-14">
+                </label>
+
+                <div>
+                  <button class="btn" type="submit">Save changes</button>
+                </div>
+
+              </form>
+
+            </div>
+          </section>
+
+
+          <section class="panel">
+            <header><h3>Account status</h3></header>
+            <div class="pb">
+
+              <div class="list">
+                <div class="li"><span class="dot">✅</span><div class="t"><b>Email verified</b></div></div>
+                <div class="li"><span class="dot">📱</span><div class="t"><b>Phone verified</b></div></div>
+                <div class="li"><span class="dot">🔐</span><div class="t"><b>2-step login</b><small>Not enabled</small></div></div>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+
+
+        <div class="grid g2">
+
+          <section class="panel">
+            <header><h3>Notifications</h3></header>
+            <div class="pb">
+
+              <div class="sw">
+                <div><b>Order updates</b><small>SMS and email</small></div>
+                <label class="tg"><input type="checkbox" id="n1" checked><i></i></label>
+              </div>
+
+              <div class="sw">
+                <div><b>Price drop alerts</b><small>When wishlist items go on sale</small></div>
+                <label class="tg"><input type="checkbox" id="n2" checked><i></i></label>
+              </div>
+
+              <div class="sw">
+                <div><b>New arrivals</b><small>Weekly digest</small></div>
+                <label class="tg"><input type="checkbox" id="n3"><i></i></label>
+              </div>
+
+              <div class="sw">
+                <div><b>Routine reminders</b><small>Morning and night</small></div>
+                <label class="tg"><input type="checkbox" id="n4" checked><i></i></label>
+              </div>
+
+            </div>
+          </section>
+
+
+          <section class="panel">
+            <header><h3>Security</h3></header>
+            <div class="pb">
+
+              <form class="form" id="passwordForm" style="grid-template-columns:1fr">
+
+                <label class="f">
+                  Current password
+                  <input type="password" name="currentPassword" required>
+                </label>
+
+                <label class="f">
+                  New password
+                  <input type="password" name="newPassword" minlength="6" required>
+                </label>
+
+                <div>
+                  <button class="btn" type="submit">Update password</button>
+                </div>
+
+              </form>
+
+            </div>
+          </section>
+
+        </div>
+
+
+        <section class="panel">
+          <header><h3>Payment methods</h3></header>
+          <div class="pb">
+
+            <div class="list">
+
+              <div class="li">
+                <span class="dot">💳</span>
+                <div class="t"><b>Visa ending 4821</b><small>Expires 08/28</small></div>
+                <span class="bdg b-active">Active</span>
+              </div>
+
+              <div class="li">
+                <span class="dot">📲</span>
+                <div class="t"><b>UPI: aanya@okbank</b></div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+
+        <section class="panel">
+          <header><h3>Danger zone</h3></header>
+          <div class="pb">
+            <p style="margin-bottom:12px">
+              Deleting your account removes orders, points and saved profile data permanently.
+            </p>
+            <button class="btn red sm" id="deleteAccount" type="button">Delete account</button>
+          </div>
+        </section>
+
+      </section>
+
+    </main>
+  </div>
+
+</div>
+
+
+<!-- ================= SIDEBAR OVERLAY ================= -->
+<div class="shell-ov" id="ov"></div>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="modal"></div>
+
+<!-- ================= TOAST ================= -->
+<div class="toast" id="toast" role="status"></div>
+
+
+<script src="js/dash-core.js"></script>
+<script src="js/customer-dashboard.js"></script>
+
+</body>
+</html>

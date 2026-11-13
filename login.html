@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | Stackly</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,800;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="pg-login">
+
+  <!-- HEADER -->
+  <header class="top">
+
+    <a class="logo" href="index.html">
+      <span>R</span>osé Atelier
+    </a>
+
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false">
+      <i></i>
+      <i></i>
+      <i></i>
+    </button>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="cosmetics.html">Cosmetics</a>
+      <a href="fashion.html">Fashion</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="btn login-btn on">Login</a>
+    </nav>
+
+  </header>
+
+  <div class="scrim"></div>
+
+  <!-- LOGIN HERO -->
+  <main class="login-page">
+
+    <div class="login-bg"></div>
+    <div class="login-overlay"></div>
+
+    <div class="login-layout">
+
+      <!-- LEFT CONTENT -->
+      <section class="login-intro">
+
+        <span class="intro-tag">
+          <i class="fa-solid fa-sparkles"></i>
+          THE Stackly EXPERIENCE
+        </span>
+
+        <h1>
+          Your beauty.<br>
+          Your style.<br>
+          <em>Your moment.</em>
+        </h1>
+
+        <p>
+          Step into a world of beauty and fashion curated around you.
+          Discover your favourites, explore new collections and
+          enjoy a more personal shopping experience.
+        </p>
+
+        <div class="intro-line"></div>
+
+        <div class="intro-features">
+
+          <div>
+            <i class="fa-solid fa-gem"></i>
+            <span>Curated Collections</span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-heart"></i>
+            <span>Made With Elegance</span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-star"></i>
+            <span>Your Personal Experience</span>
+          </div>
+
+        </div>
+
+        <div class="intro-quote">
+          <span>“</span>
+          <p>Elegance is when beauty meets confidence.</p>
+        </div>
+
+      </section>
+
+      <!-- LOGIN CARD -->
+      <section class="login-card">
+
+        <button class="close" id="closeBtn" type="button" aria-label="Close login">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="card-heading">
+
+          <span class="card-eyebrow">WELCOME TO Stackly</span>
+
+          <h2>Welcome <em>back.</em></h2>
+
+          <p class="ls">Sign in to continue your experience</p>
+
+        </div>
+
+        <!-- ROLE SELECTION -->
+        <div class="role-heading">CONTINUE AS</div>
+
+        <div class="roles">
+
+          <label class="role">
+            <input type="radio" name="role" value="customer" checked>
+
+            <span class="role-content">
+
+              <span class="role-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </span>
+
+              <span class="role-text">
+                <b>Customer</b>
+                <small>Shop & track orders</small>
+              </span>
+
+              <i class="fa-solid fa-circle-check role-check"></i>
+
+            </span>
+          </label>
+
+          <label class="role">
+            <input type="radio" name="role" value="partner">
+
+            <span class="role-content">
+
+              <span class="role-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </span>
+
+              <span class="role-text">
+                <b>Beauty Partner</b>
+                <small>Manage your store</small>
+              </span>
+
+              <i class="fa-solid fa-circle-check role-check"></i>
+
+            </span>
+          </label>
+
+        </div>
+
+        <!-- TABS -->
+        <div class="tabs">
+          <button type="button" class="on" data-t="in">Sign In</button>
+          <button type="button" data-t="up">Create Account</button>
+        </div>
+
+        <!-- FORM -->
+        <form id="lf" novalidate>
+
+          <label class="nmf" hidden>
+            Full Name
+
+            <span class="input-wrap">
+              <i class="fa-regular fa-user"></i>
+              <input
+                id="ln"
+                type="text"
+                placeholder="Enter your full name"
+                autocomplete="name"
+              >
+            </span>
+          </label>
+
+          <label>
+            Email Address
+
+            <span class="input-wrap">
+              <i class="fa-regular fa-envelope"></i>
+              <input
+                id="le"
+                type="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+              >
+            </span>
+          </label>
+
+          <label>
+            Password
+
+            <span class="input-wrap pw">
+              <i class="fa-solid fa-lock"></i>
+
+              <input
+                id="lp"
+                type="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+              >
+
+              <button type="button" id="eye" aria-label="Show password">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+
+            </span>
+          </label>
+          
+          <div class="login-options">
+            <label class="remember-me">
+              <input type="checkbox" id="rememberMe">
+              <span>Remember me</span>
+            </label>
+          
+            <a href="forgot-password.html" class="forgot-link">
+              Forgot password?
+            </a>
+          </div>
+
+
+          <!-- <div class="form-note">
+            <span><i class="fa-solid fa-shield-halved"></i> Secure access</span>
+            <span>Minimum 6 characters</span>
+          </div> -->
+
+          <button class="btn full" id="sub" type="submit">
+            Sign in as Customer
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <p id="lm" role="status" aria-live="polite"></p>
+
+        </form>
+
+        <div class="card-footer">
+          <span>By continuing, you agree to our</span>
+          <a href="#">Terms & Privacy Policy</a>
+        </div>
+
+      </section>
+
+    </div>
+
+    <div class="login-bottom">
+      <span>© 2026 Stackly. All rights reserved.</span>
+      <span>BEAUTY · FASHION · LIFESTYLE</span>
+    </div>
+
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/login.js"></script>
+
+</body>
+</html>

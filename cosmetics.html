@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cosmetics | Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,800;1,600&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/cosmetics.css" />
+  </head>
+  <body class="pg-cosmetics">
+    <header class="top">
+      <a class="logo" href="index.html">
+        <img src="images/logo.webp" alt="Stackly Logo">
+      </a>
+      <button class="burger" aria-label="Menu" aria-expanded="false">
+        <i></i><i></i><i></i>
+      </button>
+      <nav class="nav">
+        <a href="index.html" class="">Home</a>
+        <a href="cosmetics.html" class="on">Cosmetics</a>
+        <a href="fashion.html" class="">Fashion</a>
+        <a href="about.html" class="">About</a>
+        <a href="contact.html" class="">Contact</a>
+        <a href="login.html" class="btn login-btn">Login</a>
+      </nav>
+    </header>
+    <div class="scrim"></div>
+
+<!-- =============================== hero ============================== -->
+    <section class="hero">
+      <canvas id="petals"></canvas>
+      <div class="hbg">
+        <img
+          src="images/img2.webp"
+          alt=""
+          loading="lazy"
+          onerror="this.style.visibility = 'hidden'"
+        />
+      </div>
+      <div class="wrap hin">
+        <span class="pill">Vegan formulas</span>
+        <h1 class="shim">Cosmetics that love your skin</h1>
+        <p>Pigment-rich, skin-kind formulas in 120 shades.</p>
+        <div class="hbtn">
+          <a class="btn" href="error.html">Try Shade Studio</a>
+        </div>
+      </div>
+      <div class="spin">
+        <svg viewBox="0 0 120 120">
+          <defs>
+            <path
+              id="c"
+              d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"
+            />
+          </defs>
+          <text>
+            <textPath href="#c">Beauty • Fashion • Beauty • Fashion •</textPath>
+          </text>
+          </svg><b>♥</b>
+      </div>
+    </section>
+
+<!-- ===== SHADE STUDIO ===== -->
+    <section class="sec s-blush" id="studio">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Shade Studio</h2>
+          <p>Tap a colour to preview your lip shade.</p>
+        </div>
+        <div class="studio reveal">
+          <div class="lipbox">
+            <svg viewBox="0 0 200 120" id="lip">
+              <path
+                d="M10 60 Q50 5 100 40 Q150 5 190 60 Q150 115 100 110 Q50 115 10 60Z"
+                fill="#c1274a"
+              />
+              <path
+                d="M10 60 Q100 75 190 60"
+                stroke="#fff"
+                stroke-opacity=".5"
+                fill="none"
+                stroke-width="3"
+              />
+            </svg>
+            <h3 id="shn">Ruby Rush</h3>
+          </div>
+          <div class="swr">
+            <button
+              class="sw"
+              style="--c: #c1274a"
+              data-c="#c1274a"
+              data-n="Ruby Rush"
+              aria-label="Ruby Rush"
+            ></button
+            ><button
+              class="sw"
+              style="--c: #e0607e"
+              data-c="#e0607e"
+              data-n="Petal Pop"
+              aria-label="Petal Pop"
+            ></button
+            ><button
+              class="sw"
+              style="--c: #a0344f"
+              data-c="#a0344f"
+              data-n="Brick stack"
+              aria-label="Brick stack"
+            ></button
+            ><button
+              class="sw"
+              style="--c: #7b1e3a"
+              data-c="#7b1e3a"
+              data-n="Mulberry"
+              aria-label="Mulberry"
+            ></button
+            ><button
+              class="sw"
+              style="--c: #f08a5d"
+              data-c="#f08a5d"
+              data-n="Peach Fizz"
+              aria-label="Peach Fizz"
+            ></button
+            ><button
+              class="sw"
+              style="--c: #d94f9a"
+              data-c="#d94f9a"
+              data-n="Orchid"
+              aria-label="Orchid"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ===== SHOP BY CATEGORY ===== -->
+<section class="sec s-cream category-section" id="categories">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="extra-kicker">EXPLORE OUR COLLECTION</span>
+      <h2>Find Your Beauty Essential</h2>
+      <p>Discover the little things that make you feel extraordinary.</p>
+    </div>
+
+    <div class="category-grid">
+      <a href="#bestsellers" class="category-card reveal">
+        <img src="images/img13.webp" alt="Lipstick collection">
+        <div class="category-overlay">
+          <span>01 / COLOUR</span>
+          <h3>Lips &amp; Colour</h3>
+          <p>Express yourself in every shade.</p>
+          <b>EXPLORE COLLECTION ↗</b>
+        </div>
+      </a>
+
+      <a href="#bestsellers" class="category-card reveal">
+        <img src="images/img14.webp" alt="Skincare collection">
+        <div class="category-overlay">
+          <span>02 / SKIN</span>
+          <h3>Skincare Rituals</h3>
+          <p>Everyday care, extraordinary glow.</p>
+          <b>EXPLORE COLLECTION ↗</b>
+        </div>
+      </a>
+
+      <a href="#bestsellers" class="category-card reveal">
+        <img src="images/img16.webp" alt="Makeup collection">
+        <div class="category-overlay">
+          <span>03 / BEAUTY</span>
+          <h3>Face Essentials</h3>
+          <p>Your perfect finishing touch.</p>
+          <b>EXPLORE COLLECTION ↗</b>
+        </div>
+      </a>
+
+      <a href="#bestsellers" class="category-card reveal">
+        <img src="images/img1.webp" alt="Eye makeup collection">
+        <div class="category-overlay">
+          <span>04 / EYES</span>
+          <h3>Eyes &amp; Brows</h3>
+          <p>Let your eyes tell the story.</p>
+          <b>EXPLORE COLLECTION ↗</b>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BESTSELLERS ===================== -->
+    <section class="sec s-cream" id="bestsellers">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Bestselling cosmetics</h2>
+          <p>Six formulas our customers repurchase most.</p>
+        </div>
+        <div class="grid">
+          <article class="card reveal">
+            <div class="ci">
+              <img
+                src="images/img7.webp"
+                alt="Velvet Rouge Lipstick"
+                loading="lazy"
+                onerror="this.style.visibility = 'hidden'"
+              />
+            </div>
+            <div class="cb">
+              <span class="tag">₹899</span>
+              <h3>Velvet Rouge Lipstick</h3>
+              <p>Matte, 12-hour wear.</p>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="ci">
+              <img
+                src="images/img1.webp"
+                alt="Eye Palette Dusk"
+                loading="lazy"
+                onerror="this.style.visibility = 'hidden'"
+              />
+            </div>
+            <div class="cb">
+              <span class="tag">₹1,299</span>
+              <h3>Eye Palette Dusk</h3>
+              <p>12 shimmer and matte shades.</p>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="ci">
+              <img
+                src="imgages/img8.webp"
+                alt="Cloud Brush Set"
+                loading="lazy"
+                onerror="this.style.visibility = 'hidden'"
+              />
+            </div>
+            <div class="cb">
+              <span class="tag">₹1,499</span>
+              <h3>Cloud Brush Set</h3>
+              <p>12 soft vegan brushes.</p>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="ci">
+              <img
+                src="images/img2.webp"
+                alt="Satin Blush Duo"
+                loading="lazy"
+                onerror="this.style.visibility = 'hidden'"
+              />
+            </div>
+            <div class="cb">
+              <span class="tag">₹749</span>
+              <h3>Satin Blush Duo</h3>
+              <p>Buildable cheek colour.</p>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="ci">
+              <img
+                src="images/img3.webp"
+                alt="Glow Serum"
+                loading="lazy"
+                onerror="this.style.visibility = 'hidden'"
+              />
+            </div>
+            <div class="cb">
+              <span class="tag">₹1,099</span>
+              <h3>Glow Serum</h3>
+              <p>Vitamin C 10%.</p>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="ci">
+              <img
+                src="images/img15.webp"
+                alt="Barrier Cream"
+                loading="lazy"
+                onerror="this.style.visibility = 'hidden'"
+              />
+            </div>
+            <div class="cb">
+              <span class="tag">₹949</span>
+              <h3>Barrier Cream</h3>
+              <p>Ceramides for 48-hour moisture.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+<!-- ===== NEW ARRIVALS ===== -->
+<section class="sec s-blush arrival-section" id="new-arrivals">
+  <div class="wrap">
+    <div class="arrival-heading reveal">
+      <div class="shead">
+        <span class="extra-kicker">JUST LANDED</span>
+        <h2>Fresh From Stack</h2>
+        <p>Meet your next beauty obsession.</p>
+      </div>
+      <a href="error.html" class="arrival-link">VIEW COLLECTION ↗</a>
+    </div>
+
+    <div class="arrival-grid">
+
+      <article class="arrival-card reveal">
+        <div class="arrival-img">
+          <img src="images/img16.webp" alt="stack glow serum">
+          <span class="arrival-badge">NEW ARRIVAL</span>
+          <span class="arrival-number">01</span>
+        </div>
+        <div class="arrival-info">
+          <div>
+            <span class="arrival-type">SKINCARE</span>
+            <h3>stack Glow Elixir</h3>
+            <p>Lightweight hydration with a radiant finish.</p>
+          </div>
+          <strong>₹1,249</strong>
+        </div>
+        <a href="error.html" class="arrival-btn">DISCOVER PRODUCT ↗</a>
+      </article>
+
+      <article class="arrival-card reveal">
+        <div class="arrival-img">
+          <img src="images/img17.webp" alt="Luxury face cream">
+          <span class="arrival-badge">JUST DROPPED</span>
+          <span class="arrival-number">02</span>
+        </div>
+        <div class="arrival-info">
+          <div>
+            <span class="arrival-type">SKINCARE</span>
+            <h3>Silk Cloud Cream</h3>
+            <p>A soft, comforting daily moisturiser.</p>
+          </div>
+          <strong>₹999</strong>
+        </div>
+        <a href="error.html" class="arrival-btn">DISCOVER PRODUCT ↗</a>
+      </article>
+
+      <article class="arrival-card reveal">
+        <div class="arrival-img">
+          <img src="images/img18.webp" alt="Luxury makeup palette">
+          <span class="arrival-badge">NEW SHADE</span>
+          <span class="arrival-number">03</span>
+        </div>
+        <div class="arrival-info">
+          <div>
+            <span class="arrival-type">MAKEUP</span>
+            <h3>Petal Blush Palette</h3>
+            <p>Beautiful colour for a natural flush.</p>
+          </div>
+          <strong>₹1,099</strong>
+        </div>
+        <a href="error.html" class="arrival-btn">DISCOVER PRODUCT ↗</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SKIN GLOW JOURNEY ==================== -->
+    <section class="sec s-violet" id="">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Skin glow journey</h2>
+          <p>Drag the slider to see four weeks of the Glow routine.</p>
+        </div>
+        <div class="ba reveal" id="ba">
+          <div class="bimg before">
+            <img
+              src="images/img6.webp"
+              alt=""
+              loading="lazy"
+              onerror="this.style.visibility = 'hidden'"
+            />
+          </div>
+          <div class="bimg after">
+            <img
+              src="images/img6.webp"
+              alt=""
+              loading="lazy"
+              onerror="this.style.visibility = 'hidden'"
+            />
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            aria-label="Before and after"
+          /><span class="bl">Before</span><span class="br2">After</span>
+        </div>
+      </div>
+    </section>
+
+<!-- ============================== Routine ================================= -->
+    <section class="sec s-lav" id="">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Your daily routine</h2>
+          <p>Four steps, five minutes.</p>
+        </div>
+        <ol class="steps">
+          <li class="reveal">
+            <b>1</b>
+            <div>
+              <h4>Cleanse</h4>
+              <p>Remove the day with a gel cleanser.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <b>2</b>
+            <div>
+              <h4>Treat</h4>
+              <p>Apply vitamin C serum to damp skin.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <b>3</b>
+            <div>
+              <h4>Moisturise</h4>
+              <p>Lock in water with ceramide cream.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <b>4</b>
+            <div>
+              <h4>Colour</h4>
+              <p>Finish with tint, blush and lip.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+<!-- ===== BEAUTY GIFT SETS ===== -->
+<section class="sec s-cream gift-section" id="gift-sets">
+  <div class="wrap">
+
+    <div class="gift-heading reveal">
+      <span class="extra-kicker">A LITTLE BOX OF HAPPINESS</span>
+      <h2>Gifts Wrapped in Beauty</h2>
+      <p>Thoughtful collections for yourself and someone special.</p>
+    </div>
+
+    <div class="gift-layout">
+
+      <div class="gift-feature reveal">
+        <img src="images/img19.webp" alt="Luxury beauty gift box">
+        <div class="gift-feature-content">
+          <span>THE SIGNATURE COLLECTION</span>
+          <h3>Make Every Moment Beautiful.</h3>
+          <p>A thoughtfully curated beauty experience, wrapped with love.</p>
+          <a href="error.html" class="btn gold">Explore Gift Sets ↗</a>
+        </div>
+      </div>
+
+      <div class="gift-products">
+
+        <article class="gift-product reveal">
+          <div class="gift-product-img">
+            <img src="images/img20.webp" alt="stack essentials gift set">
+          </div>
+          <div class="gift-product-info">
+            <span>THE EVERYDAY SET</span>
+            <h3>stack Essentials</h3>
+            <p>₹1,799</p>
+            <a href="error.html">DISCOVER ↗</a>
+          </div>
+        </article>
+
+        <article class="gift-product reveal">
+          <div class="gift-product-img">
+            <img src="images/img2.webp" alt="Luxury makeup gift set">
+          </div>
+          <div class="gift-product-info">
+            <span>THE COLOUR EDIT</span>
+            <h3>Blush &amp; Bloom</h3>
+            <p>₹2,299</p>
+            <a href="error.html">DISCOVER ↗</a>
+          </div>
+        </article>
+
+        <article class="gift-product reveal">
+          <div class="gift-product-img">
+            <img src="images/img14.webp" alt="Luxury skincare gift set">
+          </div>
+          <div class="gift-product-info">
+            <span>THE GLOW EDIT</span>
+            <h3>Pure Radiance</h3>
+            <p>₹2,599</p>
+            <a href="error.html">DISCOVER ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="gift-note reveal">
+      <span>✦</span>
+      <p>Beautifully presented. Thoughtfully selected. Made to be remembered.</p>
+      <span>✦</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================== FAQ ============================= -->
+    <section class="sec s-gold" id="">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Questions answered</h2>
+          <p>Everything before you buy.</p>
+        </div>
+        <div class="faq">
+          <details class="reveal">
+            <summary>Are your products cruelty-free?</summary>
+            <p>
+              Yes. Every cosmetic is vegan, cruelty-free and never tested on
+              animals.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>Is the serum safe for sensitive skin?</summary>
+            <p>
+              It is fragrance-free and patch tested; start with every other
+              night.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>What is the shelf life?</summary>
+            <p>12 months after opening, shown by the jar icon on the pack.</p>
+          </details>
+          <details class="reveal">
+            <summary>How do I find my shade?</summary>
+            <p>
+              Use the Shade Studio on the Cosmetics page or book a free video
+              consult.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+    
+<!-- ==================== SHADE MATCH ==================== -->
+    <section class="sec s-stack" id="">
+      <div class="wrap">
+        <div class="shead reveal">
+          <h2>Free shade match</h2>
+          <p></p>
+        </div>
+        <div class="ctabox reveal">
+          <h3>Get matched in 10 minutes</h3>
+          <p>Book a video consult with our colour artists.</p>
+          <a class="btn gold" href="error.html">Book a consult</a>
+        </div>
+      </div>
+    </section>
+
+
+<!-- ================= stack ATELIER FOOTER ================= -->
+<footer class="stack-footer">
+  <div class="wrap">
+
+    <div class="stack-footer-grid">
+
+      <!-- BRAND -->
+      <div class="stack-footer-brand">
+        <a class="logo" href="index.html">
+          <img src="images/logo.webp" alt="Stackly Logo">
+        </a>
+
+        <p>
+          Beauty, fashion and self-expression come together
+          at Stackly. Discover thoughtfully created
+          cosmetics and timeless styles made to celebrate you.
+        </p>
+
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="stack-footer-col">
+        <h5>Explore</h5>
+        <a href="index.html">Home</a>
+        <a href="cosmetics.html">Cosmetics</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <!-- CUSTOMER CARE -->
+      <div class="stack-footer-col">
+        <h5>Customer Care</h5>
+        <a href="contact.html">Help & Support</a>
+        <a href="login.html">My Account</a>
+        <a href="error.html">Shipping Information</a>
+        <a href="error.html">Returns & Exchanges</a>
+        <a href="error.html">Privacy Policy</a>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div class="stack-footer-col stack-newsletter">
+        <h5>Stay in Bloom</h5>
+
+        <p>
+          Join our little world of beauty and style.
+          Get the latest collections, inspiration and updates.
+        </p>
+
+        <form class="stack-newsletter-form">
+          <input
+            type="email"
+            placeholder="Your email address"
+            aria-label="Your email address"
+            required
+          >
+
+          <button type="submit" aria-label="Subscribe">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <span class="newsletter-note">
+          A little beauty inspiration, straight to your inbox.
+        </span>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="stack-footer-bottom">
+      <span>
+        &copy; 2026 Stackly. All rights reserved.
+      </span>
+
+      <div class="footer-bottom-links">
+        <a href="error.html">Privacy</a>
+        <a href="error.html">Terms</a>
+      </div>
+
+      <span class="footer-made">
+        Made with <i class="fa-solid fa-heart"></i>
+        for every kind of beauty.
+      </span>
+    </div>
+
+  </div>
+</footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/cosmetics.js"></script>
+  </body>
+</html>

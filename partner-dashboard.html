@@ -1,0 +1,485 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Partner Dashboard | Stackly</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/dash-core.css">
+  <link rel="stylesheet" href="css/partner-dashboard.css">
+</head>
+
+<body class="dash part">
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside id="side" class="side">
+    <a class="logo" href="index.html">
+      <img src="images/logo.webp" alt="Stackly Logo">
+    </a>
+
+    <div class="who">
+      <div class="av avatar" id="userInitials">PN</div>
+      <div>
+        <b id="userName" class="profileName">Priya Nair</b>
+        <small class="profileEmail">priya@email.com</small>
+      </div>
+    </div>
+
+    <nav class="menu" aria-label="Dashboard">
+      <button class="mb" data-m="overview"><span class="ic">📊</span>Overview</button>
+      <button class="mb" data-m="products"><span class="ic">🛍️</span>Products</button>
+      <button class="mb" data-m="orders"><span class="ic">📦</span>Orders<span class="cnt">3</span></button>
+      <button class="mb" data-m="analytics"><span class="ic">📈</span>Analytics</button>
+      <button class="mb" data-m="payouts"><span class="ic">💸</span>Payouts</button>
+      <button class="mb" data-m="settings"><span class="ic">⚙️</span>Store Settings</button>
+    </nav>
+
+    <a class="mb" href="index.html"><span class="ic">🌐</span>Visit store</a>
+    <button class="logout" id="lo">⎋ Logout</button>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <header id="top" class="topbar">
+      <button class="burger" aria-label="Toggle menu">☰</button>
+      <h2 id="ttl">Overview</h2>
+
+      <label class="search">
+        🔍
+        <input id="sq" placeholder="Search modules…" aria-label="Search modules">
+      </label>
+
+      <button class="ibtn" id="bell" aria-label="Notifications">
+        🔔<i>3</i>
+      </button>
+
+      <button class="tb-out" id="lo2">Logout</button>
+
+      <div class="drop" id="drop">
+        <p>🛒 3 new orders waiting</p>
+        <p>⚠️ Glow Serum has 9 units left</p>
+        <p>💸 Payout scheduled for Friday</p>
+      </div>
+    </header>
+
+    <main id="view">
+
+      <!-- ================= OVERVIEW ================= -->
+      <section class="mod dashboard-section" id="overview">
+
+        <div class="hero">
+          <div>
+            <h3>Store performance</h3>
+            <p>Revenue is up 18% on last month. Two products need restocking and 3 orders are waiting to be packed.</p>
+          </div>
+          <a class="btn g" href="#orders">Process orders</a>
+        </div>
+
+        <div class="grid k4">
+          <div class="kpi"><span class="ki">💰</span><div><small>Revenue (30d)</small><b>₹4,86,200</b><em class="up">▲ 18.4% vs last month</em></div></div>
+          <div class="kpi"><span class="ki">📦</span><div><small>Orders</small><b>1,284</b><em class="up">▲ 9.2%</em></div></div>
+          <div class="kpi"><span class="ki">🎯</span><div><small>Conversion</small><b>3.8%</b><em class="up">▲ 0.4 pts</em></div></div>
+          <div class="kpi"><span class="ki">🧾</span><div><small>Avg. order value</small><b>₹1,890</b><em class="dn">▼ 2.1%</em></div></div>
+        </div>
+
+        <div class="grid gm">
+          <section class="panel">
+            <header><h3>Sales trend</h3><span>Revenue in ₹ thousands</span></header>
+            <div class="chips" id="rg" style="margin-bottom:10px">
+              <button class="chip" data-r="7 days">7 days</button>
+              <button class="chip on" data-r="30 days">30 days</button>
+              <button class="chip" data-r="90 days">90 days</button>
+            </div>
+            <div id="lch"></div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Orders by channel</h3></header>
+            <div class="dn-w">
+              <div class="donut" style="background:conic-gradient(#ff4f86 0% 42.06%,#f4c26b 42.06% 67%,#7a4bd6 67% 88.79%,#18a999 88.79% 100%)">
+                <div>1,284<small>orders</small></div>
+              </div>
+              <div class="leg">
+                <span><i style="background:#ff4f86"></i>Website <b>42%</b></span>
+                <span><i style="background:#f4c26b"></i>Instagram <b>25%</b></span>
+                <span><i style="background:#7a4bd6"></i>Marketplace <b>22%</b></span>
+                <span><i style="background:#18a999"></i>Walk-in <b>11%</b></span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="grid g3">
+          <section class="panel">
+            <header><h3>Top products</h3><span>Units sold</span></header>
+            <div class="hb">
+              <div><span>Lipstick</span><u><i style="width:100%"></i></u><b>142</b></div>
+              <div><span>Barrier Cream</span><u><i style="width:62%"></i></u><b>88</b></div>
+              <div><span>Eye Palette</span><u><i style="width:45%"></i></u><b>64</b></div>
+              <div><span>Blazer</span><u><i style="width:22%"></i></u><b>31</b></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Goals this month</h3></header>
+            <div class="prog"><p><span>Revenue target</span><b>₹4.86L / ₹6L</b></p><u><i style="width:78%"></i></u></div>
+            <div class="prog"><p><span>New customers</span><b>320 / 500</b></p><u><i style="width:64%"></i></u></div>
+            <div class="prog"><p><span>Fulfilment SLA</span><b>92%</b></p><u><i style="width:92%"></i></u></div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Activity feed</h3></header>
+            <div class="list">
+              <div class="li"><span class="dot">🛒</span><div class="t"><b>New order #8841</b><small>2 min ago</small></div></div>
+              <div class="li"><span class="dot">⭐</span><div class="t"><b>5★ review on Glow Serum</b><small>1 hr ago</small></div></div>
+              <div class="li"><span class="dot">⚠️</span><div class="t"><b>Glow Serum low stock (9)</b><small>3 hrs ago</small></div></div>
+              <div class="li"><span class="dot">💸</span><div class="t"><b>Payout of ₹1,42,000 sent</b><small>Yesterday</small></div></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <header><h3>Recent orders</h3></header>
+          <div id="recentOrders"></div>
+        </section>
+      </section>
+
+      <!-- ================= PRODUCTS ================= -->
+      <section class="mod dashboard-section" id="products" hidden>
+
+        <div class="grid k4">
+          <div class="kpi"><span class="ki">🏷️</span><div><small>Listed products</small><b id="listedCount">8</b><em class="up">▲ 2 added this week</em></div></div>
+          <div class="kpi"><span class="ki">⚠️</span><div><small>Low stock</small><b id="lowStockCount">2</b><em class="dn">▼ restock soon</em></div></div>
+          <div class="kpi"><span class="ki">⛔</span><div><small>Out of stock</small><b id="outStockCount">1</b><em class="dn">▼ lost sales risk</em></div></div>
+          <div class="kpi"><span class="ki">⭐</span><div><small>Avg. rating</small><b>4.7</b><em class="up">▲ 0.1</em></div></div>
+        </div>
+
+        <section class="panel">
+          <header><h3>Product catalogue</h3><span>Toggle to publish or hide</span></header>
+          <div class="tools">
+            <label class="f"><input id="ps" placeholder="Search products…"></label>
+            <select class="st" id="pcat">
+              <option>All</option>
+              <option>Cosmetics</option>
+              <option>Skincare</option>
+              <option>Fashion</option>
+            </select>
+            <button class="btn" id="add">+ Add product</button>
+          </div>
+          <div id="pt"></div>
+        </section>
+
+        <div class="grid g2">
+          <section class="panel">
+            <header><h3>Sales by category</h3></header>
+            <div class="dn-w">
+              <div class="donut" style="background:conic-gradient(#ff4f86 0% 46%,#f4c26b 46% 70%,#7a4bd6 70% 100%)">
+                <div>3<small>lines</small></div>
+              </div>
+              <div class="leg">
+                <span><i style="background:#ff4f86"></i>Cosmetics <b>46%</b></span>
+                <span><i style="background:#f4c26b"></i>Skincare <b>24%</b></span>
+                <span><i style="background:#7a4bd6"></i>Fashion <b>30%</b></span>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Pricing and listing tips</h3></header>
+            <div class="list">
+              <div class="li"><span class="dot">📸</span><div class="t"><b>Add 4+ photos</b><small>Listings with 4 images sell 32% more</small></div></div>
+              <div class="li"><span class="dot">🏷️</span><div class="t"><b>Bundle serum and cream</b><small>Raises basket value by about ₹600</small></div></div>
+              <div class="li"><span class="dot">🔎</span><div class="t"><b>Use shade names in titles</b><small>Improves search visibility</small></div></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <header><h3>Reviews to answer</h3></header>
+          <div class="tw">
+            <table>
+              <thead><tr><th>Product</th><th>Customer</th><th>Rating</th><th>Comment</th></tr></thead>
+              <tbody>
+                <tr><td>Glow Serum</td><td>Ritika S.</td><td>★★★★★</td><td>Cleared my skin in four weeks!</td></tr>
+                <tr><td>Hoodie</td><td>Tara N.</td><td>★★★☆☆</td><td>Lovely fabric but runs large.</td></tr>
+                <tr><td>Lipstick</td><td>Sana A.</td><td>★★★★★</td><td>Perfect red, long lasting.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <!-- ================= ORDERS ================= -->
+      <section class="mod dashboard-section" id="orders" hidden>
+
+        <div class="grid k4">
+          <div class="kpi"><span class="ki">⏳</span><div><small>Pending</small><b>1</b><em class="dn">▼ needs action</em></div></div>
+          <div class="kpi"><span class="ki">📮</span><div><small>To ship</small><b>2</b><em class="dn">▼ due today</em></div></div>
+          <div class="kpi"><span class="ki">✅</span><div><small>Delivered (30d)</small><b>1,096</b><em class="up">▲ 96% on time</em></div></div>
+          <div class="kpi"><span class="ki">↩️</span><div><small>Return rate</small><b>2.4%</b><em class="up">▲ 0.3 pts</em></div></div>
+        </div>
+
+        <section class="panel">
+          <header><h3>Order pipeline</h3><span>Counts update when you change a status</span></header>
+          <div class="kan" id="kn"></div>
+        </section>
+
+        <section class="panel">
+          <header><h3>All orders</h3><span>Update status from the dropdown</span></header>
+          <div id="ot"></div>
+        </section>
+
+        <div class="grid g2">
+          <section class="panel">
+            <header><h3>Shipping partners</h3><span>On-time delivery</span></header>
+            <div class="hb">
+              <div><span>BlueDart</span><u><i style="width:100%"></i></u><b>92%</b></div>
+              <div><span>Delhivery</span><u><i style="width:96%"></i></u><b>88%</b></div>
+              <div><span>India Post</span><u><i style="width:77%"></i></u><b>71%</b></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Returns queue</h3></header>
+            <div class="list">
+              <div class="li"><span class="dot">↩️</span><div class="t"><b>#8836 Eye Palette Dusk</b><small>Reason: shade mismatch</small></div><button class="btn sm" data-ap>Approve</button></div>
+              <div class="li"><span class="dot">↩️</span><div class="t"><b>#8812 Garden Midi</b><small>Reason: wrong size</small></div><button class="btn sm" data-ap>Approve</button></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- ================= ANALYTICS ================= -->
+      <section class="mod dashboard-section" id="analytics" hidden>
+
+        <div class="grid k4">
+          <div class="kpi"><span class="ki">👥</span><div><small>Visitors (30d)</small><b>84,210</b><em class="up">▲ 12%</em></div></div>
+          <div class="kpi"><span class="ki">🛒</span><div><small>Add-to-bag rate</small><b>9.6%</b><em class="up">▲ 1.1 pts</em></div></div>
+          <div class="kpi"><span class="ki">🔁</span><div><small>Repeat customers</small><b>41%</b><em class="up">▲ 4 pts</em></div></div>
+          <div class="kpi"><span class="ki">↩️</span><div><small>Bounce rate</small><b>38%</b><em class="dn">▼ 2 pts</em></div></div>
+        </div>
+
+        <div class="grid g2">
+          <section class="panel">
+            <header><h3>Traffic sources</h3></header>
+            <div class="hb">
+              <div><span>Instagram</span><u><i style="width:100%"></i></u><b>41%</b></div>
+              <div><span>Google search</span><u><i style="width:63%"></i></u><b>26%</b></div>
+              <div><span>Direct</span><u><i style="width:39%"></i></u><b>16%</b></div>
+              <div><span>Email</span><u><i style="width:27%"></i></u><b>11%</b></div>
+              <div><span>Referral</span><u><i style="width:15%"></i></u><b>6%</b></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Conversion funnel</h3></header>
+            <div class="hb">
+              <div><span>Visits</span><u><i style="width:100%"></i></u><b>84.2k</b></div>
+              <div><span>Product views</span><u><i style="width:55%"></i></u><b>46.3k</b></div>
+              <div><span>Added to bag</span><u><i style="width:10%"></i></u><b>8.1k</b></div>
+              <div><span>Checkout</span><u><i style="width:5%"></i></u><b>4.2k</b></div>
+              <div><span>Purchased</span><u><i style="width:4%"></i></u><b>3.2k</b></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="grid g2">
+          <section class="panel">
+            <header><h3>Customers by age</h3></header>
+            <div id="ageChart" class="bars"></div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Best selling hours</h3><span>Darker means more orders</span></header>
+            <div class="heat" id="hm"></div>
+          </section>
+        </div>
+
+        <div class="grid g2">
+          <section class="panel">
+            <header><h3>Top cities</h3></header>
+            <div class="tw">
+              <table>
+                <thead><tr><th>City</th><th>Orders</th><th>Revenue</th></tr></thead>
+                <tbody>
+                  <tr><td>Chennai</td><td>312</td><td>₹1,24,000</td></tr>
+                  <tr><td>Bengaluru</td><td>284</td><td>₹1,18,500</td></tr>
+                  <tr><td>Hyderabad</td><td>201</td><td>₹79,200</td></tr>
+                  <tr><td>Mumbai</td><td>176</td><td>₹71,400</td></tr>
+                  <tr><td>Hosur</td><td>58</td><td>₹21,300</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Rating distribution</h3><span>4.7 average · 1,231 reviews</span></header>
+            <div class="hb">
+              <div><span>5 stars</span><u><i style="width:100%"></i></u><b>820</b></div>
+              <div><span>4 stars</span><u><i style="width:38%"></i></u><b>310</b></div>
+              <div><span>3 stars</span><u><i style="width:9%"></i></u><b>70</b></div>
+              <div><span>2 stars</span><u><i style="width:3%"></i></u><b>22</b></div>
+              <div><span>1 star</span><u><i style="width:2%"></i></u><b>9</b></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- ================= PAYOUTS ================= -->
+      <section class="mod dashboard-section" id="payouts" hidden>
+
+        <div class="grid k4">
+          <div class="kpi"><span class="ki">🏦</span><div><small>Available balance</small><span class="bal">₹86,450</span></div></div>
+          <div class="kpi"><span class="ki">⏳</span><div><small>Pending clearance</small><b>₹32,200</b><em class="up">3 days</em></div></div>
+          <div class="kpi"><span class="ki">✅</span><div><small>Paid out (YTD)</small><b>₹16,24,000</b><em class="up">▲ 22%</em></div></div>
+          <div class="kpi"><span class="ki">🏅</span><div><small>Commission rate</small><b>12%</b><em class="up">Gold partner</em></div></div>
+        </div>
+
+        <div class="grid gm">
+          <section class="panel">
+            <header><h3>Payout schedule</h3><span>Weekly every Friday</span></header>
+            <div class="tw">
+              <table>
+                <thead><tr><th>Date</th><th>Reference</th><th>Amount</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>13 Nov</td><td>PO-2291</td><td>₹86,450</td><td><span class="bdg b-scheduled">Scheduled</span></td></tr>
+                  <tr><td>06 Nov</td><td>PO-2270</td><td>₹1,42,000</td><td><span class="bdg b-paid">Paid</span></td></tr>
+                  <tr><td>30 Oct</td><td>PO-2244</td><td>₹1,18,300</td><td><span class="bdg b-paid">Paid</span></td></tr>
+                  <tr><td>23 Oct</td><td>PO-2210</td><td>₹1,31,800</td><td><span class="bdg b-paid">Paid</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Request instant payout</h3></header>
+            <p style="margin-bottom:12px;color:var(--muted)">Get your balance within 30 minutes for a 1.5% fee.</p>
+            <button class="btn g" id="rq">Request payout</button>
+          </section>
+        </div>
+
+        <div class="grid g2">
+          <section class="panel">
+            <header><h3>Where your sales go</h3></header>
+            <div class="dn-w">
+              <div class="donut" style="background:conic-gradient(#ff4f86 0% 75.86%,#f4c26b 75.86% 86.21%,#7a4bd6 86.21% 93.97%,#18a999 93.97% 100%)">
+                <div>₹100<small>sale</small></div>
+              </div>
+              <div class="leg">
+                <span><i style="background:#ff4f86"></i>Your earnings <b>76%</b></span>
+                <span><i style="background:#f4c26b"></i>Commission <b>10%</b></span>
+                <span><i style="background:#7a4bd6"></i>Taxes <b>8%</b></span>
+                <span><i style="background:#18a999"></i>Shipping <b>6%</b></span>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <header><h3>Invoices</h3></header>
+            <div class="list">
+              <div class="li"><span class="dot">📄</span><div class="t"><b>October 2026 statement</b><small>PDF · 218 KB</small></div><button class="btn sm o" data-dl="October 2026">Download</button></div>
+              <div class="li"><span class="dot">📄</span><div class="t"><b>September 2026 statement</b><small>PDF · 218 KB</small></div><button class="btn sm o" data-dl="September 2026">Download</button></div>
+              <div class="li"><span class="dot">📄</span><div class="t"><b>August 2026 statement</b><small>PDF · 218 KB</small></div><button class="btn sm o" data-dl="August 2026">Download</button></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <header><h3>Bank account</h3></header>
+          <div class="form">
+            <label class="f">Account holder<input id="bankHolder" value="Rosé Atelier Partner LLP"></label>
+            <label class="f">Account number<input id="bankNumber" value="XXXXXX4821"></label>
+            <label class="f">IFSC<input id="bankIfsc" value="HDFC0001234"></label>
+            <div style="align-self:end"><button class="btn" id="sb">Update bank details</button></div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ================= SETTINGS ================= -->
+      <section class="mod dashboard-section" id="settings" hidden>
+
+        <div class="grid gm">
+          <section class="panel">
+            <header><h3>Store profile</h3></header>
+            <form class="form" id="sf">
+              <label class="f">Store name<input value="Rosé Atelier Boutique"></label>
+              <label class="f">Support email<input type="email" value="partner@roseatelier.com"></label>
+              <label class="f">City<input value="Hosur"></label>
+              <label class="f">GST number<input value="33ABCDE1234F1Z5"></label>
+              <label class="f" style="grid-column:1/-1">About store<textarea rows="3">Curated vegan beauty and slow fashion from Tamil Nadu.</textarea></label>
+              <div><button class="btn">Save store</button></div>
+            </form>
+          </section>
+
+          <section class="panel">
+            <header><h3>Store health</h3></header>
+            <div class="prog"><p><span>Profile complete</span><b>94%</b></p><u><i style="width:94%"></i></u></div>
+            <div class="prog"><p><span>Policy compliance</span><b>88%</b></p><u><i style="width:88%"></i></u></div>
+            <div class="prog"><p><span>Customer satisfaction</span><b>97%</b></p><u><i style="width:97%"></i></u></div>
+          </section>
+        </div>
+
+        <div class="grid g2">
+          <section class="panel">
+            <header><h3>Team members</h3></header>
+            <div class="tw">
+              <table>
+                <thead><tr><th>Name</th><th>Role</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>Priya N.</td><td>Owner</td><td><span class="bdg b-active">Active</span></td></tr>
+                  <tr><td>Karthik M.</td><td>Inventory</td><td><span class="bdg b-active">Active</span></td></tr>
+                  <tr><td>Divya S.</td><td>Support</td><td><span class="bdg b-pending">Pending</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <br>
+            <button class="btn sm" id="inv">Invite member</button>
+          </section>
+
+          <section class="panel">
+            <header><h3>Notifications</h3></header>
+            <div class="sw"><div><b>New order alerts</b><small>Instant email and push</small></div><label class="tg"><input type="checkbox" id="a" checked><i></i></label></div>
+            <div class="sw"><div><b>Low stock warnings</b><small>Below 15 units</small></div><label class="tg"><input type="checkbox" id="b" checked><i></i></label></div>
+            <div class="sw"><div><b>Weekly report</b><small>Every Monday</small></div><label class="tg"><input type="checkbox" id="c"><i></i></label></div>
+            <div class="sw"><div><b>Review alerts</b><small>New ratings</small></div><label class="tg"><input type="checkbox" id="d" checked><i></i></label></div>
+          </section>
+        </div>
+
+        <div class="grid g2">
+          <section class="panel">
+            <header><h3>Shipping rules</h3></header>
+            <div class="form" style="grid-template-columns:1fr 1fr">
+              <label class="f">Free shipping above (₹)<input type="number" value="999"></label>
+              <label class="f">Handling time (days)<input type="number" value="2"></label>
+            </div>
+            <br>
+            <button class="btn sm" id="ss">Save rules</button>
+          </section>
+
+          <section class="panel">
+            <header><h3>Integrations</h3></header>
+            <div class="sw"><div><b>Instagram Shop</b><small>Sync catalogue</small></div><label class="tg"><input type="checkbox" id="i1" checked><i></i></label></div>
+            <div class="sw"><div><b>Google Analytics</b><small>Traffic tracking</small></div><label class="tg"><input type="checkbox" id="i2" checked><i></i></label></div>
+            <div class="sw"><div><b>WhatsApp Business</b><small>Order updates</small></div><label class="tg"><input type="checkbox" id="i3"><i></i></label></div>
+          </section>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<div id="ov" class="shell-ov"></div>
+<div id="modal" class="modal"></div>
+<div id="toast" class="toast" role="status"></div>
+
+<script src="js/dash-core.js"></script>
+<script src="js/partner-dashboard.js"></script>
+</body>
+</html>

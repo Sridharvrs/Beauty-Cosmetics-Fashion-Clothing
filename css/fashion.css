@@ -1,0 +1,1019 @@
+:root {
+  --card-bg: #e6fbf5;
+  --card-fg: #0b3a32;
+  --card-bd: 4px solid #0b3a32;
+  --card-ac: #0b6e5d;
+}
+.card {
+  border-radius: 0;
+  box-shadow: 9px 9px 0 #0b6e5d;
+}
+.card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 14px 14px 0 #ff4f86;
+}
+.card.hide {
+  display: none;
+}
+.card.pop {
+  animation: pp 0.5s;
+}
+@keyframes pp {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-4deg);
+  }
+}
+.chips {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+.chips button {
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: 2px solid #26104a;
+  background: #fff;
+  color: #26104a;
+  font: 600 1rem Outfit;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.chips .on,
+.chips button:hover {
+  background: #26104a;
+  color: #fff;
+}
+.mixer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 26px;
+  max-width: 860px;
+  margin: auto;
+}
+.mrow {
+  position: relative;
+  text-align: center;
+}
+.mimg {
+  height: 300px;
+  border-radius: 120px 120px 16px 16px;
+  overflow: hidden;
+  border: 5px solid #f4c26b;
+  background: #ccc;
+}
+.mimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: pp 0.5s;
+}
+.mrow button {
+  position: absolute;
+  top: 130px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: #ff4f86;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.pv {
+  left: -10px;
+}
+.nx {
+  right: -10px;
+}
+.mrow button:hover {
+  background: #f4c26b;
+  color: #1b0b22;
+}
+.mrow p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+.mixnote {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 1.2rem;
+  color: #f4c26b;
+}
+
+
+/* =========================================
+   ROSÉ ATELIER — PREMIUM COLLECTION
+========================================= */
+
+.pg-fashion .fashion-collection {
+  padding: 105px 0;
+  background: #f8edf5;
+  color: #2a1030;
+}
+
+.pg-fashion .collection-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 48px;
+}
+
+.pg-fashion .collection-heading h2 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin: 15px 0;
+  color: #2a1030;
+}
+
+.pg-fashion .collection-heading h2 span {
+  color: #ff4f86;
+}
+
+.pg-fashion .collection-heading p {
+  font-size: 18px;
+  color: #705c70;
+  margin: 0;
+}
+
+.pg-fashion .collection-count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-right: 3px solid #ff4f86;
+  padding-right: 18px;
+}
+
+.pg-fashion .collection-count strong {
+  font-family: "Fraunces", serif;
+  font-size: 42px;
+  line-height: 1;
+  color: #b3123f;
+}
+
+.pg-fashion .collection-count span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 8px;
+  color: #705c70;
+}
+
+/* FILTER TOOLBAR */
+
+.pg-fashion .collection-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 22px 0;
+  margin-bottom: 30px;
+  border-top: 1px solid #d9c7d7;
+  border-bottom: 1px solid #d9c7d7;
+}
+
+.pg-fashion .collection-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #4a294d;
+}
+
+.pg-fashion .toolbar-line {
+  width: 27px;
+  height: 2px;
+  background: #ff4f86;
+}
+
+.pg-fashion .collection-toolbar .chips {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pg-fashion .collection-toolbar .chips button {
+  border: 1px solid #d8c2d4;
+  border-radius: 30px;
+  padding: 11px 17px;
+  background: transparent;
+  color: #4b3450;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.pg-fashion .collection-toolbar .chips button span {
+  margin-left: 5px;
+  color: #a17c9d;
+  font-size: 12px;
+}
+
+.pg-fashion .collection-toolbar .chips button:hover,
+.pg-fashion .collection-toolbar .chips button.on {
+  background: #2a1030;
+  border-color: #2a1030;
+  color: #fff;
+}
+
+.pg-fashion .collection-toolbar .chips button.on span,
+.pg-fashion .collection-toolbar .chips button:hover span {
+  color: #ffb2cb;
+}
+
+/* PRODUCT GRID */
+
+.pg-fashion .collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px 25px;
+}
+
+.pg-fashion .collection-card {
+  background: #fffafc;
+  border: 1px solid #ead8e5;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(42, 16, 48, .05);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.pg-fashion .collection-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(42, 16, 48, .13);
+}
+
+/* PRODUCT IMAGE */
+
+.pg-fashion .collection-card .collection-image {
+  height: 390px;
+  position: relative;
+  overflow: hidden;
+  background: #eadde8;
+  margin: 0;
+}
+
+.pg-fashion .collection-card .collection-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.pg-fashion .collection-card:hover .collection-image img {
+  transform: scale(1.07);
+}
+
+.pg-fashion .product-label {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  background: #fffafc;
+  color: #762c52;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.pg-fashion .product-number {
+  position: absolute;
+  right: 16px;
+  bottom: 15px;
+  color: white;
+  background: rgba(42, 16, 48, .7);
+  padding: 7px 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* PRODUCT INFORMATION */
+
+.pg-fashion .collection-info {
+  padding: 23px 22px 24px;
+}
+
+.pg-fashion .product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #a45b7d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.pg-fashion .collection-info h3 {
+  font-family: "Fraunces", serif;
+  color: #2a1030;
+  font-size: 23px;
+  line-height: 1.3;
+  margin: 0 0 9px;
+}
+
+.pg-fashion .collection-info p {
+  color: #786a79;
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 52px;
+  margin: 0;
+}
+
+.pg-fashion .product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 17px;
+  border-top: 1px solid #eadce7;
+}
+
+.pg-fashion .product-bottom strong {
+  color: #a51d50;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.pg-fashion .product-bottom a {
+  color: #3d2043;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  transition: color .3s ease;
+}
+
+.pg-fashion .product-bottom a span {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform .3s ease;
+}
+
+.pg-fashion .product-bottom a:hover {
+  color: #ff4f86;
+}
+
+.pg-fashion .product-bottom a:hover span {
+  transform: translate(4px, -3px);
+}
+
+/* BOTTOM EDITORIAL LINE */
+
+.pg-fashion .collection-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 55px;
+  padding-top: 25px;
+  border-top: 1px solid #d9c7d7;
+}
+
+.pg-fashion .collection-bottom > span {
+  font-size: 13px;
+  letter-spacing: 1.7px;
+  font-weight: 700;
+  color: #806781;
+}
+
+.pg-fashion .collection-bottom a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #a51d50;
+  text-decoration: none;
+}
+
+.pg-fashion .collection-bottom a:hover {
+  color: #ff4f86;
+}
+
+/* FILTER ANIMATION */
+
+.pg-fashion .collection-card.hide {
+  display: none;
+}
+
+.pg-fashion .collection-card.pop {
+  animation: collectionPop .45s ease;
+}
+
+@keyframes collectionPop {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .pg-fashion .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pg-fashion .collection-card .collection-image {
+    height: 420px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .pg-fashion .fashion-collection {
+    padding: 70px 0;
+  }
+
+  .pg-fashion .collection-head {
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .pg-fashion .collection-heading h2 {
+    font-size: 2.6rem;
+  }
+
+  .pg-fashion .collection-heading p {
+    font-size: 16px;
+  }
+
+  .pg-fashion .collection-count {
+    padding-right: 10px;
+  }
+
+  .pg-fashion .collection-count strong {
+    font-size: 30px;
+  }
+
+  .pg-fashion .collection-count span {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .pg-fashion .collection-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pg-fashion .collection-toolbar .chips {
+    width: 100%;
+    gap: 9px;
+  }
+
+  .pg-fashion .collection-toolbar .chips button {
+    padding: 10px 13px;
+    font-size: 13px;
+  }
+
+  .pg-fashion .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 13px;
+  }
+
+  .pg-fashion .collection-card .collection-image {
+    height: 260px;
+  }
+
+  .pg-fashion .collection-info {
+    padding: 15px 13px 17px;
+  }
+
+  .pg-fashion .collection-info h3 {
+    font-size: 18px;
+  }
+
+  .pg-fashion .collection-info p {
+    font-size: 14px;
+    min-height: 65px;
+  }
+
+  .pg-fashion .product-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 14px;
+    padding-top: 13px;
+  }
+
+  .pg-fashion .product-bottom strong {
+    font-size: 19px;
+  }
+
+  .pg-fashion .product-bottom a {
+    font-size: 14px;
+  }
+
+  .pg-fashion .product-label {
+    top: 10px;
+    left: 9px;
+    padding: 7px 8px;
+    font-size: 9px;
+  }
+
+  .pg-fashion .product-number {
+    right: 8px;
+    bottom: 8px;
+    font-size: 10px;
+  }
+
+  .pg-fashion .collection-bottom {
+    margin-top: 35px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .pg-fashion .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pg-fashion .collection-card .collection-image {
+    height: 370px;
+  }
+
+  .pg-fashion .collection-info h3 {
+    font-size: 21px;
+  }
+
+  .pg-fashion .collection-info p {
+    min-height: auto;
+    font-size: 15px;
+  }
+
+  .pg-fashion .product-bottom {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+
+/* =========================================
+   ROSÉ ATELIER - PREMIUM FASHION SECTIONS
+========================================= */
+
+.pg-fashion .fashion-kicker {
+  display: inline-block;
+  margin-bottom: 13px;
+  color: #b3123f;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+/* ===== THE STYLE EDIT ===== */
+
+.pg-fashion .edit-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  grid-template-rows: repeat(2, 280px);
+  gap: 20px;
+}
+
+.pg-fashion .edit-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: #35152e;
+  isolation: isolate;
+}
+
+.pg-fashion .edit-tall {
+  grid-row: span 2;
+}
+
+.pg-fashion .edit-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(27,11,34,.92),
+    rgba(27,11,34,.02) 75%
+  );
+}
+
+.pg-fashion .edit-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.pg-fashion .edit-card:hover img {
+  transform: scale(1.07);
+}
+
+.pg-fashion .edit-overlay {
+  position: absolute;
+  z-index: 1;
+  left: 28px;
+  right: 25px;
+  bottom: 28px;
+  color: #fff;
+}
+
+.pg-fashion .edit-overlay span {
+  color: #f4c26b;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.pg-fashion .edit-overlay h3 {
+  margin: 10px 0;
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.pg-fashion .edit-overlay p {
+  max-width: 340px;
+  margin-bottom: 16px;
+  color: rgba(255,255,255,.8);
+  font-size: 13px;
+}
+
+.pg-fashion .edit-overlay a {
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #f4c26b;
+  border-bottom: 1px solid #f4c26b;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+/* ===== DRESS FOR EVERY MOMENT ===== */
+
+.pg-fashion .occasion-section .fashion-kicker {
+  color: #f4c26b;
+}
+
+.pg-fashion .occasion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pg-fashion .occasion-card {
+  position: relative;
+  display: block;
+  height: 440px;
+  overflow: hidden;
+  color: #fff;
+  background: #24102e;
+  isolation: isolate;
+}
+
+.pg-fashion .occasion-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 20%,
+    rgba(20,5,25,.12) 42%,
+    rgba(20,5,25,.9) 100%
+  );
+}
+
+.pg-fashion .occasion-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .8s;
+}
+
+.pg-fashion .occasion-card:hover img {
+  transform: scale(1.08);
+}
+
+.pg-fashion .occasion-info {
+  position: absolute;
+  z-index: 1;
+  left: 23px;
+  right: 18px;
+  bottom: 25px;
+}
+
+.pg-fashion .occasion-info span {
+  color: #f4c26b;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.pg-fashion .occasion-info h3 {
+  margin: 9px 0;
+  font-size: 28px;
+}
+
+.pg-fashion .occasion-info p {
+  margin-bottom: 17px;
+  color: rgba(255,255,255,.82);
+  font-size: 13px;
+}
+
+.pg-fashion .occasion-info b {
+  color: #f4c26b;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+}
+
+/* ===== THE ATELIER PROMISE ===== */
+
+.pg-fashion .promise-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  align-items: center;
+}
+
+.pg-fashion .promise-visual {
+  position: relative;
+  min-height: 580px;
+  background: #e8b8c9;
+}
+
+.pg-fashion .promise-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pg-fashion .promise-stamp {
+  position: absolute;
+  right: -28px;
+  bottom: 35px;
+  width: 145px;
+  height: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f4c26b;
+  outline: 5px solid #1b0b22;
+  background: #1b0b22;
+  color: #fff;
+  transform: rotate(8deg);
+}
+
+.pg-fashion .promise-stamp span {
+  color: #f4c26b;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.pg-fashion .promise-stamp b {
+  margin: 5px 0;
+  font-family: "Fraunces", serif;
+  font-size: 23px;
+}
+
+.pg-fashion .promise-content h2 {
+  max-width: 540px;
+  margin: 0 0 18px;
+  color: #2a1030;
+  font-family: "Fraunces", serif;
+  font-size: clamp(32px, 4vw, 49px);
+  line-height: 1.15;
+}
+
+.pg-fashion .promise-intro {
+  max-width: 480px;
+  margin-bottom: 30px;
+  color: #684b5c;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.pg-fashion .promise-point {
+  display: flex;
+  gap: 18px;
+  padding: 19px 0;
+  border-top: 1px solid rgba(42,16,48,.16);
+}
+
+.pg-fashion .promise-point > span {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #b3123f;
+  border-radius: 50%;
+  color: #b3123f;
+  font-family: "Fraunces", serif;
+  font-size: 14px;
+}
+
+.pg-fashion .promise-point h3 {
+  margin-bottom: 5px;
+  color: #2a1030;
+  font-size: 19px;
+}
+
+.pg-fashion .promise-point p {
+  color: #765c6b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.pg-fashion .promise-link {
+  display: inline-block;
+  margin-top: 23px;
+  padding: 13px 0;
+  color: #8f2049;
+  border-bottom: 1px solid #8f2049;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  transition: color .3s;
+}
+
+.pg-fashion .promise-link:hover {
+  color: #ff4f86;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .pg-fashion .promise-layout {
+    gap: 45px;
+  }
+
+  .pg-fashion .promise-visual {
+    min-height: 490px;
+  }
+
+  .pg-fashion .occasion-card {
+    height: 370px;
+  }
+}
+
+@media (max-width: 650px) {
+  .pg-fashion .edit-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 390px 240px;
+    gap: 12px;
+  }
+
+  .pg-fashion .edit-tall {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .pg-fashion .edit-overlay {
+    left: 15px;
+    right: 12px;
+    bottom: 16px;
+  }
+
+  .pg-fashion .edit-overlay h3 {
+    font-size: 23px;
+  }
+
+  .pg-fashion .edit-overlay p {
+    font-size: 11px;
+  }
+
+  .pg-fashion .edit-overlay span,
+  .pg-fashion .edit-overlay a {
+    font-size: 8px;
+  }
+
+  .pg-fashion .occasion-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .pg-fashion .occasion-card {
+    height: 390px;
+  }
+
+  .pg-fashion .promise-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .pg-fashion .promise-visual {
+    min-height: 430px;
+    margin-right: 15px;
+  }
+
+  .pg-fashion .promise-stamp {
+    right: -15px;
+    width: 115px;
+    height: 115px;
+  }
+
+  .pg-fashion .promise-stamp b {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 380px) {
+  .pg-fashion .edit-grid {
+    grid-template-rows: 340px 220px;
+  }
+
+  .pg-fashion .occasion-card {
+    height: 340px;
+  }
+}
+
+
+/* ============================= TEXT SIZES ================================== */
+/* ===== FASHION PAGE — TYPOGRAPHY SIZE UPGRADE ===== */
+
+.pg-fashion {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Section headings */
+.pg-fashion .shead h2,
+.pg-fashion .fashion-edit h2,
+.pg-fashion .occasion-section h2,
+.pg-fashion .promise-section h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+}
+
+/* Section descriptions */
+.pg-fashion .shead p,
+.pg-fashion .fashion-edit p,
+.pg-fashion .occasion-section p,
+.pg-fashion .promise-section p {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.75;
+}
+
+/* Card headings */
+.pg-fashion .card h3,
+.pg-fashion .edit-card h3,
+.pg-fashion .occasion-card h3,
+.pg-fashion .promise-point h3 {
+  font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+  line-height: 1.3;
+}
+
+/* Card descriptions */
+.pg-fashion .card p,
+.pg-fashion .edit-card p,
+.pg-fashion .occasion-info p,
+.pg-fashion .promise-point p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Small labels and category text */
+.pg-fashion .tag,
+.pg-fashion .fashion-kicker,
+.pg-fashion .chips button {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+/* Buttons and links */
+.pg-fashion .btn,
+.pg-fashion .promise-link {
+  font-size: 1rem;
+}
+
+/* Mobile readability */
+@media (max-width: 650px) {
+  .pg-fashion {
+    font-size: 16px;
+  }
+
+  .pg-fashion .shead h2,
+  .pg-fashion .fashion-edit h2,
+  .pg-fashion .occasion-section h2,
+  .pg-fashion .promise-section h2 {
+    font-size: 2rem;
+  }
+
+  .pg-fashion .card p,
+  .pg-fashion .edit-card p,
+  .pg-fashion .occasion-info p,
+  .pg-fashion .promise-point p {
+    font-size: 0.98rem;
+  }
+}

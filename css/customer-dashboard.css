@@ -1,0 +1,89 @@
+body.cust {
+  --bg: #fdf0f5;
+  --fg: #2a1030;
+  --panel: #fff;
+  --pfg: #2a1030;
+  --pbd: 1px solid #f0d0de;
+  --rad: 22px;
+  --muted: #6b4a78;
+  --line: #ecd5e2;
+  --hov: #fff3f8;
+  --inp: #fff;
+  --accent: #e0245e;
+  --gold: #f4c26b;
+  --side: linear-gradient(175deg, #3a1450, #1b0b22);
+  --top: rgba(253, 240, 245, 0.92);
+  --tfg: #2a1030;
+  --kbg: #ffe0eb;
+  --up: #0b7a3e;
+  --dn: #b3123f;
+  --hero: linear-gradient(120deg, #e0245e, #7a4bd6);
+}
+.cust .panel {
+  box-shadow: 0 10px 30px rgba(122, 75, 214, 0.08);
+}
+.cust .panel > header h3::before {
+  content: "✿ ";
+  color: var(--accent);
+}
+.cust .pcard {
+  border-bottom: 5px solid var(--accent);
+}
+.ring {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(#f4c26b var(--p), rgba(255, 255, 255, 0.25) 0);
+  flex: none;
+}
+.ring div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #4a1d62;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+}
+.ring small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+.tier {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+.tier div {
+  padding: 14px 6px;
+  border-radius: 14px;
+  border: 2px solid var(--line);
+  font-size: 0.88rem;
+}
+.tier div.on {
+  border-color: var(--accent);
+  background: #ffe0eb;
+}
+.tier b {
+  display: block;
+  font-size: 1.05rem;
+}
+.rw {
+  border: 2px dashed var(--accent);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  display: grid;
+  gap: 8px;
+  background: #fff7fa;
+}
+.rw .em {
+  font-size: 2.2rem;
+}
